@@ -1,0 +1,12 @@
+---
+interface Blog {
+  id: string;
+  title: string;
+}
+
+const { blog }: { blog: Blog } = Astro.props as { blog: Blog };
+---
+
+<li>
+  <a href={`/blog/${blog.id}`}>{blog.title}</a>
+</li>

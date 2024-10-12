@@ -1,0 +1,34 @@
+// 端末名でのブレークポイントの定義
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "laptop": 1024px,
+  "desktop": 1200px,
+);
+
+// レスポンシブミックスイン
+// 使用法:
+// @include respond-to('device-name') {
+//   // ここにスタイルを記述
+// }
+// 例:
+// .container {
+//   width: 100%;
+//
+//   @include respond-to('tablet') {
+//     width: 80%;
+//   }
+//
+//   @include respond-to('laptop') {
+//     width: 60%;
+//   }
+// }
+@mixin respond-to($device) {
+  @if map-has-key($breakpoints, $device) {
+    @media (min-width: map-get($breakpoints, $device)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for device: #{$device}.";
+  }
+}

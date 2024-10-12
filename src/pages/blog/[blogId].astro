@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { getBlogs, getBlogDetail } from "../library/microcms";
+import Layout from "../../layouts/Layout.astro";
+import { getBlogs, getBlogDetail } from "../../library/microcms";
 
 // 詳細記事ページの全パスを取得
 export async function getStaticPaths() {
@@ -24,11 +24,3 @@ const blog = await getBlogDetail(blogId as string);
     <div class="post" set:html={blog.content}></div>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
-  }
-</style>
