@@ -4,7 +4,12 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import '../styles/global.scss'
+import Navigation from "../components/Navigation/Navigation.astro";
+import "the-new-css-reset";
+import "../styles/global.scss";
+import Footer from "../components/Footer/Footer.astro";
+import Header from "../components/Header/Header.astro";
+import styles from "./Layout.module.scss";
 ---
 
 <!doctype html>
@@ -18,14 +23,10 @@ import '../styles/global.scss'
 		<title>{title}</title>
 	</head>
 	<body>
-		<h1>Imoto Kazuya<span>FrontEnd Portfolio Site.</span></h1>
-		<nav>
-			<ul>
-				<li><a href="/">Works</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		</nav>
+		<Header>
+			<Navigation />
+		</Header>
 		<slot />
+		<Footer />
 	</body>
 </html>

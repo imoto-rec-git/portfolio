@@ -1,0 +1,12 @@
+---
+import styles from "./Header.module.scss";
+---
+
+<header class={styles.header}>
+    <div class={styles.headline}>
+        <h1 class={styles.logo}>
+        <a href="/">IMOTO KAZUYA<span>frontend portfolio site.</span></a>
+        </h1>
+        <slot />
+    </div>
+</header>

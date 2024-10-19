@@ -3,8 +3,8 @@ import { getBlogs } from "../../library/microcms";
 import BlogListItem from "../BlogListItem/BlogListItem.astro";
 
 type BlogContent = {
-  id: string;
-  title: string;
+	id: string;
+	title: string;
 };
 
 const response = await getBlogs({ fields: ["id", "title"] });

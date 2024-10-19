@@ -3,16 +3,16 @@ import Heading from "../../components/Heading/Heading.astro";
 import MainContent from "../../components/MainContent/MainContent.astro";
 import Paragraph from "../../components/Paragraph/Paragraph.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getBlogs, getBlogDetail } from "../../library/microcms";
+import { getBlogDetail, getBlogs } from "../../library/microcms";
 
 // 詳細記事ページの全パスを取得
 export async function getStaticPaths() {
-  const response = await getBlogs({ fields: ["id"] });
-  return response.contents.map((content: any) => ({
-    params: {
-      blogId: content.id,
-    },
-  }));
+	const response = await getBlogs({ fields: ["id"] });
+	return response.contents.map((content: any) => ({
+		params: {
+			blogId: content.id,
+		},
+	}));
 }
 
 const { blogId } = Astro.params;

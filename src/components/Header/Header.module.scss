@@ -1,0 +1,51 @@
+@use "../../styles/breakpoints" as *;
+
+.header {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  @include respond-to("laptop") {
+    display: block;
+    margin-top: 7.5rem;
+  }
+}
+.headline {
+  margin: auto;
+  display: block;
+  padding: 0;
+  max-width: 960px;
+  width: 100%;
+  z-index: 3;
+  @include respond-to("laptop") {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 2rem;
+  }
+}
+.logo {
+  display: block;
+  margin: auto;
+  padding: 0 2rem;
+  text-align: center;
+  @include respond-to("laptop") {
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 1.2rem;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+}
+.logo span {
+  padding-right: 0;
+  text-align: center;
+  @include respond-to("laptop") {
+    display: block;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    padding-right: 1.2rem;
+  }
+}

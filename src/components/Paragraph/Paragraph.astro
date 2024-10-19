@@ -1,12 +1,12 @@
 ---
-import styles from './Paragraph.module.scss';
+import styles from "./Paragraph.module.scss";
 export interface Props {
-    level: 'p' | 'span';
+	level: "p" | "span";
 }
-const {level} = Astro.props;
+const { level } = Astro.props;
 const ParagraphTag = level;
 ---
 
 <ParagraphTag class={styles.text}>
-    <slot></slot>
+    <slot />
 </ParagraphTag>
