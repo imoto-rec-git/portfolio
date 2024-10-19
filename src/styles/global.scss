@@ -9,17 +9,13 @@
     white 60%
   );
 }
-html {
-  font-family: system-ui, sans-serif;
-}
+html,
 code {
-  font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
