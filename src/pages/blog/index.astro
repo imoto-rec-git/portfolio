@@ -1,11 +1,13 @@
 ---
 import BlogList from "../../components/BlogList/BlogList.astro";
+import Heading from "../../components/Heading/Heading.astro";
+import MainContent from "../../components/MainContent/MainContent.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="My first blog with Astro">
-  <main>
-    <h1>blog</h1>
+  <MainContent>
+    <Heading text="BLOG PAGE" level="h1" />
     <BlogList />
-  </main>
+  </MainContent>
 </Layout>
