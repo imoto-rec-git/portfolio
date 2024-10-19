@@ -1,0 +1,27 @@
+@use "../../styles/breakpoints" as *;
+
+.link {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  @include respond-to("laptop") {
+    padding: 0;
+  }
+  &::after {
+    @include respond-to("laptop") {
+      border-bottom: 3px solid #333;
+      content: "";
+      display: block;
+      transition: all 0.3s ease;
+      width: 0;
+    }
+  }
+  &:hover {
+    &::after {
+      @include respond-to("laptop") {
+        border-bottom: 3px solid #333;
+        width: 100%;
+      }
+    }
+  }
+}

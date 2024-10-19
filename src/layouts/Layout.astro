@@ -1,16 +1,16 @@
 ---
-interface Props {
-	title: string;
-	description: string;
-}
-
-const { title, description } = Astro.props;
-import Navigation from "../components/Navigation/Navigation.astro";
+import "@fontsource/noto-sans-jp"
 import "the-new-css-reset";
 import "../styles/global.scss";
 import Footer from "../components/Footer/Footer.astro";
 import Header from "../components/Header/Header.astro";
-import styles from "./Layout.module.scss";
+import Navigation from "../components/Navigation/Navigation.astro";
+
+interface Props {
+	title: string;
+	description: string;
+}
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>

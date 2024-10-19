@@ -1,0 +1,11 @@
+---
+import styles from "./List.module.scss";
+import ListItem from "../ListItem/ListItem.astro";
+import Link from "../Link/Link.astro";
+---
+
+<ul class={styles.list}>
+    <ListItem><Link href="/">Works</List></ListItem>
+    <ListItem ><Link href="/about">About</List></ListItem>
+    <ListItem><Link href="/blog">Blog</List></ListItem>
+</ul>

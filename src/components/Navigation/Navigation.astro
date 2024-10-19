@@ -1,10 +1,7 @@
 ---
-import styles from "./Navigation.module.scss";
+import List from "../List/List.astro";
+import styles from "./Navigation.module.scss"
 ---
-<nav>
-    <ul class={styles.list}>
-        <li class={styles.item}><a class={styles.link} href="/">Works</a></li>
-        <li class={styles.item}><a class={styles.link} href="/about">About</a></li>
-        <li class={styles.item}><a class={styles.link} href="/blog">Blog</a></li>
-    </ul>
+<nav class={styles.nav}>
+    <List />
 </nav>
