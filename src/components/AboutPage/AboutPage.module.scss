@@ -1,0 +1,25 @@
+@use "../../styles/breakpoints" as *;
+
+.list {
+  display: block;
+  @include respond-to("laptop") {
+    grid-template-columns: auto 1fr;
+    column-gap: 18px;
+    row-gap: 36px;
+    display: grid;
+    margin-top: 38px;
+  }
+}
+.summary {
+  font-size: 1.4rem;
+  margin-top: 18px;
+  @include respond-to("laptop") {
+    margin-top: 0;
+  }
+}
+.detail {
+  font-size: 1.2rem;
+  @include respond-to("laptop") {
+    font-size: 1.4rem;
+  }
+}
