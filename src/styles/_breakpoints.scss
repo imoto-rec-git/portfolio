@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // 端末名でのブレークポイントの定義
 $breakpoints: (
   "mobile": 480px,
@@ -24,8 +26,8 @@ $breakpoints: (
 //   }
 // }
 @mixin respond-to($device) {
-  @if map-has-key($breakpoints, $device) {
-    @media (min-width: map-get($breakpoints, $device)) {
+  @if map.get($breakpoints, $device) {
+    @media (min-width: map.get($breakpoints, $device)) {
       @content;
     }
   } @else {

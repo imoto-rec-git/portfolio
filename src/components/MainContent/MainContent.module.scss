@@ -1,0 +1,9 @@
+@use "../../styles/breakpoints" as *;
+
+main {
+  width: 100%;
+  @include respond-to("laptop") {
+    max-width: 960px;
+    margin: auto;
+  }
+}
