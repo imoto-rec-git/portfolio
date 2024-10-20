@@ -1,3 +1,30 @@
+@use "./breakpoints" as *;
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/noto-sans-jp-v53-latin-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/noto-sans-jp-v53-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/noto-sans-jp-v53-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/noto-sans-jp-v53-latin-800.woff2") format("woff2");
+}
+
 :root {
   --accent: 136, 58, 234;
   --accent-light: 224, 204, 250;
@@ -19,4 +46,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: #333;
+  row-gap: 20px;
+  @include respond-to("laptop") {
+    row-gap: 40px;
+  }
 }
