@@ -9,4 +9,4 @@ const { text, level } = Astro.props;
 const HeadingTag = level;
 ---
 
-<HeadingTag class={styles.heading}>{text}</HeadingTag>
+<HeadingTag class={styles.heading} data-size={level}>{text}</HeadingTag>
