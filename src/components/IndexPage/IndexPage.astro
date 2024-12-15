@@ -16,7 +16,29 @@ import auauau from '../../../public/img/auauau.jpg'
 import hoikoreHaken from '../../../public/img/hoikore_haken.jpg'
 import HtmlContent from "../HtmlContent/HtmlContent"
 
-const projects = [
+type Detail = {
+  title: string;
+  content: string;
+  link?: string;
+};
+
+type Project = {
+  name: string;
+  image: ImageMetadata;
+  alt: string;
+  width: number;
+  height: number;
+  link?: string; 
+  description: string;
+  overview?: Array<{ summary: string; detail: string }>;
+  job?: Array<{ title: string; content: string }>;
+  role?: Array<{ title: string; content: string }>;
+  details: Detail[];
+  github?: string;
+  mockup?: string;
+};
+
+const projects: Project[] = [
 {
     name: "ECサイト フルリニューアル開発（2023年07月 〜 進行中） | iine.jp株式会社",
     image: noImage,
