@@ -30,6 +30,12 @@ const projects = [
         {summary: 'コードレビュー', detail: 'GitLab を活用し、チームメンバーと互いにコードをレビューし合い、品質向上とナレッジシェアを推進'},
         {summary: 'ジュニアエンジニアのスキル向上', detail: 'OJTや勉強会を通して、社内エンジニア（ジュニアレベル）の育成を担当。コードレビューや開発プロセスの指導を行い、チーム全体のスキルアップを目指しました。'},
     ],
+    job: [
+      {title: '職種', content: 'フロントエンドエンジニア'}
+    ],
+    role: [
+      {title: '役割', content: 'メンバー'}
+    ],
     details: [
       { title: "言語", content: "TypeScript、HTML、SCSS" },
       { title: "フレームワーク", content: "Next.js、React、CSS Modules" },
@@ -48,9 +54,16 @@ const projects = [
     height: 214,
     description: "コードレビューのレビュアーとして参画し、社内Webデザイナーが作成したコードの品質向上を支援。",
     overview:[
-        {summary: 'コードレビューの実施', detail: 'Webデザイナーが作成したコードをレビューし、品質向上や技術指導'},{summary: 'コーディング規約の策定', detail: 'チーム全体で一貫性のあるコードを保つため、BEM記法やJavaScriptのベストプラクティスを基に規約を作成'},
+        {summary: 'コードレビューの実施', detail: 'Webデザイナーが作成したコードをレビューし、品質向上や技術指導'},
+        {summary: 'コーディング規約の策定', detail: 'チーム全体で一貫性のあるコードを保つため、BEM記法やJavaScriptのベストプラクティスを基に規約を作成'},
         {summary: 'PrettierとESLintの導入', detail: '自動フォーマットと静的解析ツールをプロジェクトに導入し、コードの統一性と可読性を向上'},
         {summary: '技術指導', detail: 'Webデザイナーに対し、BEMやJavaScriptの実践的なスキルを指導。Gitの基本操作（ブランチ管理、コンフリクト解消、コミットメッセージの書き方など）を指導し、チーム全体でのスムーズなバージョン管理を実現'},
+    ],
+    job: [
+      {title: '職種', content: 'フロントエンドエンジニア'}
+    ],
+    role: [
+      {title: '役割', content: 'テックリード'}
     ],
     details: [
       { title: "言語", content: "HTML、SCSS、JavaScript" },
@@ -73,6 +86,8 @@ const projects = [
       { title: "データベース", content: "FireStore"},
       { title: "ユーザー認証", content: "Firebase Authentication"},
       { title: "ホスティング", content: "AWS Amplify"},
+      { title: "モックアップ", content: "Figmaへ移動します", link: 'https://www.figma.com/design/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0-1&p=f'},
+      { title: "GitHub", content: "https://github.com/imoto-rec-git/lunchmaps", link:'https://github.com/imoto-rec-git/lunchmaps'},
     ],
     github: "https://github.com/imoto-rec-git/lunchmaps",
     mockup: "https://www.figma.com/file/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0%3A1&amp;t=OqxH4D8zrHqcp9dI-1"
@@ -102,12 +117,21 @@ const projects = [
     height: 214,
     link: "https://www.mikomiru.com/",
     description: "販促品・ノベルティ販売のECサイト。<br />プロダクト立ち上げ当初から参加し、フロントエンド開発を担当（フロント面のプログラミング、カートのUI・UX設計〜実装、SSGの仕組み実装、CSS設計、レスポンシブコーディング、コーディング規約作成、サイト高速化の検証と実施、技術選定、デザイナーやバックエンドエンジニアとの連携など）<br />バックエンドエンジニア・デザイナーとチームを組み、アジャイル・スクラムで1週間単位のスプリントで開発していました。",
+    job: [
+      {title: '職種', content: 'フロントエンドエンジニア'}
+    ],
+    role: [
+      {title: '役割', content: 'メンバー'}
+    ],
     details: [
-      { title: "言語・フレームワークなど", content: "Laravel / PHP / TypeScript / JavaScript(ES6) / HTML / SASS(SCSS) / Node.js" },
-      { title: "開発環境", content: "PHPStorm / Docker / Node.js / AWS S3, CloudFront" },
-      { title: "デザインツール", content: "Photoshop CC / Illustrator CC / XD"},
-      { title: "プロジェクト管理", content: "BitBacket "},
-      {title: "開発手法", content: "アジャイル開発 / スクラム"}
+      { title: "言語", content: "TypeScript、PHP、HTML、SCSS" },
+      { title: "フレームワーク", content: "Laravel" },
+      { title: "テスト", content: "Laravel Dusk"},
+      { title: "バージョン管理", content: "BitBacket "},
+      {title: "デザインツール", content: "Adobe Photoshop"},
+      {title: '開発手法', content: 'アジャイル開発/スクラム'},
+      {title: 'コミュニケーションツール', content: 'Slack、Zoom'},
+      {title: 'IDE', content: 'Visual Studio Code'}
     ],
   },
   {
@@ -116,9 +140,22 @@ const projects = [
     alt: "タンブラー名入れ印刷販売サイト | 名入れタンブラー館（株式会社AmidA）",
     width: 293,
     height: 214,
-    description: "タンブラー名入れ印刷専門ECサイトフロントエンド開発を担当（フロント面のプログラミング、レスポンシブコーディング、CSS設計、コーディング規約作成、サイト高速化の検証と実施、デザイナーとの連携など）<br />上記記載のミコミルにタンブラー商品を移行したため、現在閲覧不可となっています。",
+    description: "タンブラー名入れ印刷専門のECサイト開発において、フロントエンド開発を担当しました。当初は Hugo を使用して開発を進めていましたが、途中から Next.js と React を導入し、サイトのリプレイス作業を主導しました。<br />上記記載のミコミルにタンブラー商品を移行したため、現在閲覧不可となっています。",
+    overview:[
+        {summary: 'レスポンシブコーディング', detail: '多端末対応を考慮したCSS設計と実装を担当'},
+        {summary: 'CSS設計・コーディング規約の作成', detail: 'SCSSを活用した効率的なスタイル管理を実現し、コーディング規約を策定してチーム内での統一を図りました'},
+        {summary: 'サイト高速化の検証と実施', detail: 'パフォーマンス改善のための検証と最適化を実施'},
+        {summary: 'デザイナーとの連携', detail: 'デザインと開発の間の橋渡しを行い、UI/UXを向上'},
+        {summary: 'HugoからNext.jsへのリプレイス', detail: 'サイトのモダン化を目指し、ReactとNext.jsを活用して再構築を推進'},
+    ],
+    job: [
+      {title: '職種', content: 'フロントエンドエンジニア'}
+    ],
+    role: [
+      {title: '役割', content: 'メンバー'}
+    ],
     details: [
-      { title: "言語・フレームワークなど", content: "Hugo / TypeScript / JavaScript(ES6) / HTML / SASS / Node.js" },
+      { title: "言語・フレームワークなど", content: "React / Next.js /Hugo / TypeScript / JavaScript(ES6) / HTML / SASS" },
       { title: "開発環境", content: "VSCode / GitLab / SourceTree" },
       {title: "開発手法", content: "アジャイル開発 / スクラム"}
     ],
@@ -261,7 +298,25 @@ const projects = [
                     )}
                 </h3>
                 <HtmlContent html={project.description} />
-                {project.overview && <h3 class={styles.overviewTitle}>業務内容</h3>}
+                {project.job && (
+                  <>
+                    <h3 class={styles.overviewTitle}>職種</h3>
+                    {project.job.map((jobItem) => (
+                      <p class={styles.jobDetail}>{jobItem.content}</p>
+                    ))}
+                  </>
+                )}
+                {project.role && (
+                  <>
+                    <h3 class={styles.overviewTitle}>役割</h3>
+                    {project.role.map((jobItem) => (
+                      <p class={styles.jobDetail}>{jobItem.content}</p>
+                    ))}
+                  </>
+                )}
+                {project.overview && (
+                  <h3 class={styles.overviewTitle}>業務内容</h3>
+                )}
                 {project.overview && (
                     <ul class={styles.overviewList}>
                         {project.overview.map((item) => (
@@ -276,7 +331,15 @@ const projects = [
                     {project.details.map((detail) => (
                         <>
                             <dt class={styles.summary}>{detail.title}</dt>
-                            <dd class={styles.feature}>{detail.content}</dd>
+                            <dd class={styles.feature}>
+                              {detail.link ? (
+                                <a href={detail.link} target="_blank" rel="noopener noreferrer" class={styles.link}>
+                                  {detail.content}
+                                </a>
+                              ) : (
+                                detail.content
+                              )}
+                            </dd>
                         </>
                     ))}
                 </dl>
