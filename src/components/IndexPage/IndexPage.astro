@@ -1,0 +1,281 @@
+---
+import Image from "astro/components/Image.astro"
+import styles from "./IndexPage.module.scss"
+import lunchMapsImage from "../../../public/img/lunch_maps.jpg"
+import weatherWear from "../../../public/img/whether_wear.jpg"
+import hankoya from "../../../public/img/hankoya.jpg"
+import hankoyaCmp from "../../../public/img/hankoya_cmp.jpg"
+import mikomiru from "../../../public/img/mikomiru.jpg"
+import noImage from '../../../public/img/noimage.jpg'
+import colantotte from '../../../public/img/colantotte.jpg'
+import colantotteCmp1 from '../../../public/img/colantotte_cmp1.jpg'
+import colantotteCmp2 from '../../../public/img/colantotte_cmp2.jpg'
+import hoikoreNavi from '../../../public/img/hoikore_navi.jpg'
+import hoikoreInfo from '../../../public/img/hoikore_info.jpg'
+import auauau from '../../../public/img/auauau.jpg'
+import hoikoreHaken from '../../../public/img/hoikore_haken.jpg'
+import HtmlContent from "../HtmlContent/HtmlContent"
+
+const projects = [
+{
+    name: "ECサイト フルリニューアル開発（2023年07月 〜 進行中） | iine.jp株式会社",
+    image: noImage,
+    alt: "ECサイト フルリニューアル開発",
+    width: 293,
+    height: 214,
+    description: "海外EC事業を展開するクライアントの既存ECサイトのフルリニューアルプロジェクトに参画。<br />フロントエンドエンジニアとして以下の業務を担当しています。<br />リリース前及びクライアント案件のためURLの共有は控えさせていただきます。",
+    overview:[
+        {summary: '各ページの作成', detail: 'コンポーネント設計やカスタムフックを用いて実装'},{summary: 'フォーム開発', detail: 'React Hook FormとYupを活用した入力フォームの作成'}, {summary: 'テスト実装', detail: ' JestやReact Testing Libraryを使用したユニットテスト・結合テストの作成'},
+        {summary: 'E2Eテスト', detail: 'Playwrightを用いて重要なユーザーフローを網羅したE2Eテストの作成と実行'},
+        {summary: 'コードレビュー', detail: 'GitLab を活用し、チームメンバーと互いにコードをレビューし合い、品質向上とナレッジシェアを推進'},
+        {summary: 'ジュニアエンジニアのスキル向上', detail: 'OJTや勉強会を通して、社内エンジニア（ジュニアレベル）の育成を担当。コードレビューや開発プロセスの指導を行い、チーム全体のスキルアップを目指しました。'},
+    ],
+    details: [
+      { title: "言語", content: "TypeScript、HTML、SCSS" },
+      { title: "フレームワーク", content: "Next.js、React、CSS Modules" },
+      { title: "テスト", content: "Jest、React Testing Library（Unit Test、Integration Test）、Playwright（E2E）"},
+      { title: "API", content: "GraphQL"},
+      { title: "バージョン管理", content: "GitLab"},
+      { title: "デザインツール", content: "Adobe XD"},
+      { title: "コミュニケーションツール", content: "MatterMost、Jitsi"}
+    ],
+  },
+  {
+    name: "ECサイト内の特集ページ開発支援（2023年07月 〜 2024年08月）| iine.jp株式会社",
+    image: noImage,
+    alt: "ECサイト内の特集ページ開発支援（2023年07月 〜 2024年08月）| iine.jp株式会社",
+    width: 293,
+    height: 214,
+    description: "コードレビューのレビュアーとして参画し、社内Webデザイナーが作成したコードの品質向上を支援。",
+    overview:[
+        {summary: 'コードレビューの実施', detail: 'Webデザイナーが作成したコードをレビューし、品質向上や技術指導'},{summary: 'コーディング規約の策定', detail: 'チーム全体で一貫性のあるコードを保つため、BEM記法やJavaScriptのベストプラクティスを基に規約を作成'}, {summary: 'PrettierとESLintの導入', detail: '自動フォーマットと静的解析ツールをプロジェクトに導入し、コードの統一性と可読性を向上'},
+        {summary: '技術指導', detail: 'Playwrightを用いて重要なユーザーフローを網羅したE2Eテストの作成と実行'},
+        {summary: 'コードレビュー', detail: 'Webデザイナーに対し、BEMやJavaScriptの実践的なスキルを指導。Gitの基本操作（ブランチ管理、コンフリクト解消、コミットメッセージの書き方など）を指導し、チーム全体でのスムーズなバージョン管理を実現'},
+    ],
+    details: [
+      { title: "言語", content: "TypeScript、HTML、SCSS" },
+      { title: "フレームワーク", content: " Next.js、React、CSS Modules" },
+      { title: "テスト", content: "Jest、React Testing Library（Unit Test、Integration Test）、Playwright（E2E）"},
+      { title: "API", content: "GraphQL"},
+      { title: "バージョン管理", content: "GitLab"},
+      { title: "デザインツール", content: "Adobe XD"},
+      { title: "コミュニケーションツール", content: "MatterMost、Jitsi"}
+    ],
+  },
+  {
+    name: "Lunch Maps",
+    image: lunchMapsImage,
+    alt: "Lunch Maps",
+    width: 293,
+    height: 271,
+    link: "https://main.dkpyfpx5izj45.amplifyapp.com/",
+    description: "エリア検索や現在地の場所周辺でランチできるお店をピックアップしてくれるアプリです。<br />500m〜1km範囲内で、GoogleMapの口コミ情報を元に高評価または低価格で提供しているお店はマップ上で一目でわかるようにしています。<br />またログイン（Googleアカウント認証）することで、お店をお気に入り登録可能です。（お気に入りしたお店はマップ上でお気に入り専用のピンアイコンされます。）<br />React/Next.jsの学習も兼ねて自主制作したWebアプリケーションです。",
+    details: [
+      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / グローバルステート(useContext) / TypeScript / Emotion" },
+      { title: "IDE", content: "VSCode" },
+      { title: "API", content: "GoogleMapsPlatform（Maps JavaScript API / Places API / Directions API / Geocoding API）/ GeoLocation API"},
+      { title: "データベース", content: "FireStore"},
+      { title: "ユーザー認証", content: "Firebase Authentication"},
+      { title: "ホスティング", content: "AWS Amplify"},
+    ],
+    github: "https://github.com/imoto-rec-git/lunchmaps",
+    mockup: "https://www.figma.com/file/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0%3A1&amp;t=OqxH4D8zrHqcp9dI-1"
+  },
+  {
+    name: "Weather Wear",
+    image: weatherWear,
+    alt: "Weather Wear",
+    width: 293,
+    height: 271,
+    link: "https://main.d33hf0l3u2s078.amplifyapp.com/",
+    description: "今日の天気から服装を提示するアプリです。<br />Reactの学習も兼ねて自主制作したWebアプリケーションです。",
+    details: [
+      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / TypeScript / Emotion" },
+      { title: "IDE", content: "VSCode" },
+      { title: "API", content: "Weather Forecast API / GeoLocation API"},
+      { title: "ホスティング", content: "AWS Amplify"},
+    ],
+    github: "https://github.com/imoto-rec-git/weather_wear",
+    mockup: "https://www.figma.com/file/3375ruikf5EoZy2IvEmC6s/WeatherWear?node-id=0%3A1&t=74Drokcv74rNVHmg-1"
+  },
+  {
+    name: "販促品・ノベルティの制作なら名入れ印刷サイト｜ミコミル（株式会社AmidA）",
+    image: mikomiru,
+    alt: "販促品・ノベルティの制作なら名入れ印刷サイト｜ミコミル（株式会社AmidA）",
+    width: 293,
+    height: 214,
+    link: "https://www.mikomiru.com/",
+    description: "販促品・ノベルティ販売のECサイト。プロダクト立ち上げ当初から参加し、フロントエンド開発を担当（フロント面のプログラミング、カートのUI・UX設計〜実装、SSGの仕組み実装、CSS設計、レスポンシブコーディング、コーディング規約作成、サイト高速化の検証と実施、技術選定、デザイナーやバックエンドエンジニアとの連携など）バックエンドエンジニア・デザイナーとチームを組み、アジャイル・スクラムで1週間単位のスプリントで開発していました。",
+    details: [
+      { title: "言語・フレームワークなど", content: "Laravel / PHP / TypeScript / JavaScript(ES6) / HTML / SASS(SCSS) / Node.js" },
+      { title: "開発環境", content: "PHPStorm / Docker / Node.js / AWS S3, CloudFront" },
+      { title: "デザインツール", content: "Photoshop CC / Illustrator CC / XD"},
+      { title: "プロジェクト管理", content: "BitBacket "},
+      {title: "開発手法", content: "アジャイル開発 / スクラム"}
+    ],
+  },
+  {
+    name: "タンブラー名入れ印刷販売サイト | 名入れタンブラー館（株式会社AmidA）",
+    image: noImage,
+    alt: "タンブラー名入れ印刷販売サイト | 名入れタンブラー館（株式会社AmidA）",
+    width: 293,
+    height: 214,
+    description: "タンブラー名入れ印刷専門ECサイトフロントエンド開発を担当（フロント面のプログラミング、レスポンシブコーディング、CSS設計、コーディング規約作成、サイト高速化の検証と実施、デザイナーとの連携など）※上記記載のミコミルにタンブラー商品を移行したため、現在閲覧不可となっています。",
+    details: [
+      { title: "言語・フレームワークなど", content: "Hugo / TypeScript / JavaScript(ES6) / HTML / SASS / Node.js" },
+      { title: "開発環境", content: "VSCode / GitLab / SourceTree" },
+      {title: "開発手法", content: "アジャイル開発 / スクラム"}
+    ],
+  },
+  {
+    name: "ハンコヤドットコム 遠藤憲一出演CM特設ページ｜ハンコヤドットコム（株式会社AmidA）",
+    image: hankoyaCmp,
+    alt: "ハンコヤドットコム 遠藤憲一出演CM特設ページ｜ハンコヤドットコム（株式会社AmidA）",
+    width: 293,
+    height: 214,
+    description: "ハンコヤドットコム CM特設サイト。コーディングを担当（レスポンシブコーディング、デザイナーとの連携など）",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML / SASS(SCSS) / JavaScript" },
+      { title: "開発環境", content: "VSCode / SVN / Jenkins" },
+    ],
+  },
+  {
+    name: "ハンコヤドットコム ｜ハンコヤドットコム（株式会社AmidA）",
+    image: hankoya,
+    alt: "ハンコヤドットコム ｜ハンコヤドットコム（株式会社AmidA）",
+    width: 293,
+    height: 214,
+    description: "ハンコヤドットコム CM特設サイト。コーディングを担当（レスポンシブコーディング、デザイナーとの連携など）",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML / CSS / JavaScript / PHP" },
+      { title: "開発環境", content: "VSCode / SVN / Jenkins" },
+    ],
+  },
+  {
+    name: "磁気ネックレスなど健康器具のECサイト | 株式会社コラントッテ",
+    image: colantotte,
+    alt: "磁気ネックレスなど健康器具のECサイト | 株式会社コラントッテ",
+    width: 293,
+    height: 214,
+    description: "自社ECサイトのキャンペーンや販売ページ、既存ページの調整などのレスポンシブコーディングや、Javascriptを使用したプログラミングなど担当いたしました。",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery" },
+      { title: "ツール", content: "Atom / Gulp / Git / SourceTree / Photoshop CC / Illustrator CC" },
+    ],
+  },
+  {
+    name: "Craftsmanship 職人の技能・技巧 | 株式会社コラントッテ",
+    image: colantotteCmp2,
+    alt: "Craftsmanship 職人の技能・技巧 | 株式会社コラントッテ",
+    width: 293,
+    height: 214,
+    description: "コラントッテ特集ページです。レスポンシブコーディングやページ内の各アニメーション動作など実装。",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery" },
+    ],
+  },
+  {
+    name: "青山学院大学 陸上競技部（長距離ブロック）インタビュー特集ページ | 株式会社コラントッテ",
+    image: colantotteCmp1,
+    alt: "Craftsmanship 職人の技能・技巧 | 株式会社コラントッテ",
+    width: 293,
+    height: 214,
+    description: "青山学院大学 陸上競技部（長距離ブロック）特集ページです。レスポンシブコーディングやページ内の各アニメーション動作など実装。",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery" },
+    ],
+  },
+  {
+    name: "ほいコレナビ | ベルサンテスタッフ株式会社",
+    image: hoikoreNavi,
+    alt: "ほいコレナビ | ベルサンテスタッフ株式会社",
+    width: 293,
+    height: 214,
+    description: "ベルサンテスタッフ株式会社様が運営している保育士向けの新卒求人サイトの全ページのコーディングいたしました。レスポンシブのコーディングや、PHP/MySQLを使用し求人検索のプログラミングなどを行ってきました。※遷移先は2024年版となっておりますが、担当したページは2017年・2018年となります。（レイアウトやソースコードは現行ページとほぼ変わらない構造となっております。）",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery / PHP / MySQL" },
+    ],
+  },
+  {
+    name: "ほいコレナビ 教えてinfo | ベルサンテスタッフ株式会社",
+    image: hoikoreInfo,
+    alt: "ほいコレナビ 教えてinfo | ベルサンテスタッフ株式会社",
+    width: 293,
+    height: 214,
+    description: "ベルサンテスタッフ株式会社様が運営している保育士向けのブログのワイヤフレームの作成、全ページのコーディング、WordPressの構築など担当。",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery /  WordPress" },
+      { title: "ツール", content: "Dreamweaver CS6 / Illustrator CS6" },
+    ],
+  },
+  {
+    name: "ほいくのコレカラ あうあうあう | ベルサンテスタッフ株式会社",
+    image: auauau,
+    alt: "ほいくのコレカラ あうあうあう | ベルサンテスタッフ株式会社",
+    width: 293,
+    height: 214,
+    description: "ベルサンテスタッフ株式会社様が運営している保育士向けのキュレーションサイトの全ページのコーディング、WordPressの構築など担当。",
+    details: [
+      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery /  WordPress" },
+      { title: "ツール", content: "Dreamweaver CS6" },
+    ],
+  },
+  {
+    name: "ほいくコレクション | ベルサンテスタッフ株式会社",
+    image: hoikoreHaken,
+    alt: "ほいくコレクション | ベルサンテスタッフ株式会社",
+    width: 293,
+    height: 214,
+    description: "ベルサンテスタッフ株式会社様が運営している保育士向けの派遣求人サイトの新規ページのコーディングや既存ページの調整、PHP / MySQLを使用し求人検索のプログラミングなど担当。",
+    details: [
+      { title: "言語・フレームワークなど", content: "XHTML / CSS / Javascript / jQuery / PHP / MySQL" },
+      { title: "ツール", content: "Dreamweaver CS6" },
+    ],
+  },
+];
+---
+
+<div class={styles.content}>
+    {projects.map((project) => (
+        <div class={styles.item}>
+            {project.link ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" class={styles.link}>
+                    <Image src={project.image} alt={project.alt} width={project.width} height={project.height} />
+                </a>
+            ) : (
+                <Image src={project.image} alt={project.alt} width={project.width} height={project.height} />
+            )}
+            <div class={styles.details}>
+                <h3 class={styles.title}>
+                    {project.link ? (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" class={styles.link}>
+                            {project.name}
+                        </a>
+                    ) : (
+                        project.name
+                    )}
+                </h3>
+                <HtmlContent html={project.description} />
+                {project.overview && <h3 class={styles.overviewTitle}>業務内容</h3>}
+                {project.overview && (
+                    <ul class={styles.overviewList}>
+                        {project.overview.map((item) => (
+                            <li>
+                                <strong>{item.summary}：</strong>{item.detail}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                <h3 class={styles.overviewTitle}>技術スタック</h3>
+                <dl class={styles.list}>
+                    {project.details.map((detail) => (
+                        <>
+                            <dt class={styles.summary}>{detail.title}</dt>
+                            <dd class={styles.feature}>{detail.content}</dd>
+                        </>
+                    ))}
+                </dl>
+            </div>
+        </div>
+    ))}
+</div>

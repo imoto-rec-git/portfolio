@@ -1,0 +1,66 @@
+@use "../../styles/breakpoints" as *;
+
+.content {
+  margin-top: 40px;
+  display: grid;
+  gap: 40px;
+  @include respond-to("laptop") {
+    gap: 80px;
+  }
+}
+.link {
+  text-align: center;
+  text-decoration: underline;
+  &:hover {
+    opacity: 0.6;
+    text-decoration: none;
+  }
+}
+.item {
+  display: grid;
+  gap: 20px;
+  @include respond-to("laptop") {
+    grid-template-columns: 297px auto;
+    gap: 40px;
+  }
+}
+.details {
+  display: grid;
+  gap: 10px;
+}
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.list {
+  display: grid;
+  font-size: 1.4rem;
+  gap: 5px;
+  @include respond-to("laptop") {
+    gap: 6px;
+    grid-template-columns: 180px auto;
+  }
+}
+.summary {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.feature {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.description {
+  font-size: 1.6rem;
+}
+.overviewTitle {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.overviewList {
+  display: grid;
+  row-gap: 4px;
+}
+.overviewList > li {
+  font-size: 1.2rem;
+}
