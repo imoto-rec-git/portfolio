@@ -16,9 +16,12 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "astro": "^4.15.11",
+    "canvas": "^3.0.1",
+    "fs-extra": "^11.2.0",
     "microcms-js-sdk": "^3.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sharp": "^0.33.5",
     "the-new-css-reset": "^1.11.3",
     "typescript": "^5.6.2"
   },
