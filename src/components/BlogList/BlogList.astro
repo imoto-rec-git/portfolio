@@ -1,19 +1,15 @@
 ---
-import { getBlogs } from "../../library/microcms";
+import { getBlogs, type Blog } from "../../library/microcms";
 import BlogListItem from "../BlogListItem/BlogListItem.astro";
+import styles from "./BlogList.module.scss"
 
-type BlogContent = {
-	id: string;
-	title: string;
-};
-
-const response = await getBlogs({ fields: ["id", "title"] });
+const response = await getBlogs({ fields: ["id","publishedAt", "title", "content"] });
 ---
 
-<ul>
+<ul class={styles.list}>
     {
-      response.contents.map((content: BlogContent) => (
-        <BlogListItem blog={content} />
+      response.contents.map((blog: Blog) => (
+        <BlogListItem blog={blog} />
       ))
     }
 </ul>

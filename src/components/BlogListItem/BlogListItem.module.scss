@@ -1,0 +1,14 @@
+@use "../../styles/breakpoints" as *;
+
+.item {
+  width: 100%;
+  border: 1px solid #ccc;
+  @include respond-to("laptop") {
+  }
+}
+.link {
+  display: block;
+  width: 100%;
+  @include respond-to("laptop") {
+  }
+}

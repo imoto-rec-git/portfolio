@@ -1,0 +1,9 @@
+@use "../../styles/breakpoints" as *;
+
+.list {
+  display: block;
+  @include respond-to("laptop") {
+    display: flex;
+    gap: 10px;
+  }
+}

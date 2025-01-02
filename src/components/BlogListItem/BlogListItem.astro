@@ -1,12 +1,20 @@
 ---
-interface Blog {
-	id: string;
-	title: string;
-}
+import type { Blog } from "../../library/microcms";
+import styles from "./BlogListItem.module.scss"
 
 const { blog }: { blog: Blog } = Astro.props as { blog: Blog };
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = (date.getMonth() +1).toString().padStart(2, "0");
+  const day = date.getDate().toString().padStart(2, "0");
+  return `${year}.${month}.${day}`;
+}
 ---
 
-<li>
-  <a href={`/blog/${blog.id}`}>{blog.title}</a>
+<li class={styles.item}>
+  <a href={`/blog/${blog.id}`} class={styles.link}>
+	<p>{formatDate(blog.publishedAt)}</p>
+	<p>{blog.title}</p>
+  </a>
 </li>

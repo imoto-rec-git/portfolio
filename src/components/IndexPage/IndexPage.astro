@@ -45,7 +45,7 @@ const projects: Project[] = [
     alt: "ECサイト フルリニューアル開発",
     width: 293,
     height: 214,
-    description: "海外EC事業を展開するクライアントの既存ECサイトのフルリニューアルプロジェクトに参画。<br />フロントエンドエンジニアとして以下の業務を担当しています。<br />リリース前案件のためURLの共有は控えさせていただきます。",
+    description: "海外EC事業を展開するクライアントの既存ECサイトのフルリニューアルプロジェクトに参画。<br />フロントエンドエンジニアとして以下の業務を担当しています。<br />クライアント案件・リリース前案件のためサービス名とURLは控えさせていただきます。",
     overview:[
         {summary: '各ページの作成', detail: 'コンポーネント設計やカスタムフックを用いて実装'},{summary: 'フォーム開発', detail: 'React Hook FormとYupを活用した入力フォームの作成'}, {summary: 'テスト実装', detail: ' JestやReact Testing Libraryを使用したユニットテスト・結合テストの作成'},
         {summary: 'E2Eテスト', detail: 'Playwrightを用いて重要なユーザーフローを網羅したE2Eテストの作成と実行'},
@@ -92,44 +92,6 @@ const projects: Project[] = [
       { title: "バージョン管理", content: "GitLab"},
       { title: "コミュニケーションツール", content: "MatterMost、Jitsi"}
     ],
-  },
-  {
-    name: "Lunch Maps | Next.js/React 学習を兼ねた自主制作アプリ",
-    image: lunchMapsImage,
-    alt: "Lunch Maps",
-    width: 293,
-    height: 271,
-    link: "https://main.dkpyfpx5izj45.amplifyapp.com/",
-    description: "エリア検索や現在地の場所周辺でランチできるお店をピックアップしてくれるアプリです。<br />500m〜1km範囲内で、GoogleMapの口コミ情報を元に高評価または低価格で提供しているお店はマップ上で一目でわかるようにしています。<br />またログイン（Googleアカウント認証）することで、お店をお気に入り登録可能です。（お気に入りしたお店はマップ上でお気に入り専用のピンアイコンされます。）<br />React/Next.jsの学習も兼ねて自主制作したWebアプリケーションです。",
-    details: [
-      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / グローバルステート(useContext) / TypeScript / Emotion" },
-      { title: "IDE", content: "VSCode" },
-      { title: "API", content: "GoogleMapsPlatform（Maps JavaScript API / Places API / Directions API / Geocoding API）/ GeoLocation API"},
-      { title: "データベース", content: "FireStore"},
-      { title: "ユーザー認証", content: "Firebase Authentication"},
-      { title: "ホスティング", content: "AWS Amplify"},
-      { title: "モックアップ", content: "Figmaへ移動します", link: 'https://www.figma.com/design/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0-1&p=f'},
-      { title: "GitHub", content: "https://github.com/imoto-rec-git/lunchmaps", link:'https://github.com/imoto-rec-git/lunchmaps'},
-    ],
-    github: "https://github.com/imoto-rec-git/lunchmaps",
-    mockup: "https://www.figma.com/file/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0%3A1&amp;t=OqxH4D8zrHqcp9dI-1"
-  },
-  {
-    name: "Weather Wear | React 学習を兼ねた自主制作アプリ",
-    image: weatherWear,
-    alt: "Weather Wear",
-    width: 293,
-    height: 271,
-    link: "https://main.d33hf0l3u2s078.amplifyapp.com/",
-    description: "今日の天気から服装を提示するアプリです。<br />Reactの学習も兼ねて自主制作したWebアプリケーションです。",
-    details: [
-      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / TypeScript / Emotion" },
-      { title: "IDE", content: "VSCode" },
-      { title: "API", content: "Weather Forecast API / GeoLocation API"},
-      { title: "ホスティング", content: "AWS Amplify"},
-    ],
-    github: "https://github.com/imoto-rec-git/weather_wear",
-    mockup: "https://www.figma.com/file/3375ruikf5EoZy2IvEmC6s/WeatherWear?node-id=0%3A1&t=74Drokcv74rNVHmg-1"
   },
   {
     name: "販促品・ノベルティの制作なら名入れ印刷サイト｜ミコミル（株式会社AmidA）",
@@ -207,6 +169,44 @@ const projects: Project[] = [
       { title: "言語・フレームワークなど", content: "HTML / CSS / JavaScript / PHP" },
       { title: "開発環境", content: "VSCode / SVN / Jenkins" },
     ],
+  },
+  {
+    name: "Lunch Maps | Next.js/React 学習を兼ねた自主制作アプリ",
+    image: lunchMapsImage,
+    alt: "Lunch Maps",
+    width: 293,
+    height: 271,
+    link: "https://main.dkpyfpx5izj45.amplifyapp.com/",
+    description: "エリア検索や現在地の場所周辺でランチできるお店をピックアップしてくれるアプリです。<br />500m〜1km範囲内で、GoogleMapの口コミ情報を元に高評価または低価格で提供しているお店はマップ上で一目でわかるようにしています。<br />またログイン（Googleアカウント認証）することで、お店をお気に入り登録可能です。（お気に入りしたお店はマップ上でお気に入り専用のピンアイコンされます。）<br />React/Next.jsの学習も兼ねて自主制作したWebアプリケーションです。",
+    details: [
+      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / グローバルステート(useContext) / TypeScript / Emotion" },
+      { title: "IDE", content: "VSCode" },
+      { title: "API", content: "GoogleMapsPlatform（Maps JavaScript API / Places API / Directions API / Geocoding API）/ GeoLocation API"},
+      { title: "データベース", content: "FireStore"},
+      { title: "ユーザー認証", content: "Firebase Authentication"},
+      { title: "ホスティング", content: "AWS Amplify"},
+      { title: "モックアップ", content: "Figmaへ移動します", link: 'https://www.figma.com/design/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0-1&p=f'},
+      { title: "GitHub", content: "https://github.com/imoto-rec-git/lunchmaps", link:'https://github.com/imoto-rec-git/lunchmaps'},
+    ],
+    github: "https://github.com/imoto-rec-git/lunchmaps",
+    mockup: "https://www.figma.com/file/0ssqcCEBjw2hYuoyLqjmm4/LunchMaps?node-id=0%3A1&amp;t=OqxH4D8zrHqcp9dI-1"
+  },
+  {
+    name: "Weather Wear | React 学習を兼ねた自主制作アプリ",
+    image: weatherWear,
+    alt: "Weather Wear",
+    width: 293,
+    height: 271,
+    link: "https://main.d33hf0l3u2s078.amplifyapp.com/",
+    description: "今日の天気から服装を提示するアプリです。<br />Reactの学習も兼ねて自主制作したWebアプリケーションです。",
+    details: [
+      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / TypeScript / Emotion" },
+      { title: "IDE", content: "VSCode" },
+      { title: "API", content: "Weather Forecast API / GeoLocation API"},
+      { title: "ホスティング", content: "AWS Amplify"},
+    ],
+    github: "https://github.com/imoto-rec-git/weather_wear",
+    mockup: "https://www.figma.com/file/3375ruikf5EoZy2IvEmC6s/WeatherWear?node-id=0%3A1&t=74Drokcv74rNVHmg-1"
   },
   {
     name: "磁気ネックレスなど健康器具のECサイト | 株式会社コラントッテ",
