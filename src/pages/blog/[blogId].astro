@@ -1,4 +1,5 @@
 ---
+import BlogContent from "../../components/BlogContent/BlogContent.astro";
 import Heading from "../../components/Heading/Heading.astro";
 import MainContent from "../../components/MainContent/MainContent.astro";
 import Paragraph from "../../components/Paragraph/Paragraph.astro";
@@ -22,6 +23,6 @@ const blog = await getBlogDetail(blogId as string);
 	<MainContent>
     <Heading text={blog.title} level="h2" />
     <Paragraph level="p">公開日時：{blog.publishedAt}</Paragraph>
-    <div class="post" set:html={blog.content}></div>
+	<BlogContent />
   </MainContent>
 </Layout>

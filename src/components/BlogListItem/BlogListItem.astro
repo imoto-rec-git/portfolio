@@ -8,5 +8,7 @@ const { blog }: { blog: Blog } = Astro.props as { blog: Blog };
 ---
 
 <li>
-  <a href={`/blog/${blog.id}`}>{blog.title}</a>
+  <a href={`/blog/${blog.id}`}>
+	<img src={`/public/img/article/${blog.id}.webp`} alt={blog.title}>
+  </a>
 </li>

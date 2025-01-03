@@ -1,0 +1,8 @@
+---
+import { getBlogDetail } from "../../library/microcms";
+import styles from "./BlogContent.module.scss"
+
+const { blogId } = Astro.params;
+const blog = await getBlogDetail(blogId as string);
+---
+<div class={styles.post} set:html={blog.content} />
