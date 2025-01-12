@@ -6,15 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://portfolio-tbqv.vercel.app",
-  integrations: [
-    react(),
-    sitemap(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
-  ],
+  integrations: [react(), sitemap()],
   vite: {
     css: {
       preprocessorOptions: {
