@@ -22,7 +22,7 @@ const formattedPublishedAt = formatPublishedAt(blog.publishedAt);
 
 <li>
   <a href={`/blog/${blog.id}`} class={styles.link}>
-	<Image src={`/public/img/article/${blog.id}.webp`} alt={blog.title} class={styles.image} width={335} height={227}>
+	<Image src={`/public/img/article/${blog.id}.webp`} alt={blog.title} class={styles.image} width={335} height={227} />
 	<p class={styles.date}>{formattedPublishedAt}</p>
 	<p class={styles.title}>{blog.title}</p>
   </a>
