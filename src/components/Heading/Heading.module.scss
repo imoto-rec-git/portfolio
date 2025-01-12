@@ -1,7 +1,7 @@
 @use "../../styles/breakpoints" as *;
 
 .heading {
-  font-weight: 300;
+  font-weight: 600;
   &[data-size="h1"] {
     font-size: 1.6rem;
   }
@@ -9,6 +9,13 @@
     font-size: 2.4rem;
     @include respond-to("laptop") {
       font-size: 3.6rem;
+    }
+  }
+  &[data-size="h3"] {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    @include respond-to("laptop") {
+      font-size: 3.2rem;
     }
   }
 }
