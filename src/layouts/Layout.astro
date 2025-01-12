@@ -15,6 +15,14 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="ja">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-DHWXFYPDEN"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-DHWXFYPDEN');
+		</script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Language" content="ja">
 		<meta name="description" content={description} />
