@@ -1,8 +1,22 @@
 ---
 import { getBlogDetail } from "../../library/microcms";
 import styles from "./BlogContent.module.scss"
+import { load } from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/vs2015.css";
 
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId as string);
+
+// cheerioでコードブロックを抜き出し、シンタックスハイライトを適用
+const $ = load(blog.content);
+$("pre code").each((_, elm) => {
+  const result = hljs.highlightAuto($(elm).text());
+  $(elm).html(result.value);
+  $(elm).addClass("hljs");
+});
+blog.content = $.html();
 ---
-<div class={styles.post} set:html={blog.content} />
+<div class={styles.container}>
+    <div class={styles.post} set:html={blog.content} />
+</div>

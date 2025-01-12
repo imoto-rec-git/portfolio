@@ -1,3 +1,67 @@
-.post h2 {
-  font-size: 12px;
+@use "../../styles/breakpoints" as *;
+
+.container {
+  margin-top: 20px;
+}
+
+.post {
+  & > h3 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #d6e3ed;
+    padding-bottom: 6px;
+    margin: 20px 0;
+    font-weight: 800;
+    @include respond-to("laptop") {
+      font-size: 2.4rem;
+    }
+  }
+  & > p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    @include respond-to("laptop") {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+    > code {
+      font-size: 1.2rem;
+      background-color: #333333;
+      color: #dfdfdf;
+      padding: 2px 4px;
+      line-height: 1;
+    }
+  }
+  & > ul,
+  > ol {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    @include respond-to("laptop") {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+  & figure {
+    margin-top: 20px;
+  }
+  & img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+  & pre {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  & pre code {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  & pre code span {
+    font-size: 1.2rem;
+  }
+  & a {
+    text-decoration: underline;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

@@ -102,7 +102,7 @@ async function generateThumbnail({
   title,
   outputFilePath,
 }: GenerateThumbnailParams): Promise<void> {
-  const templatePath = "./public/img/baseArticleImage.png"; // テンプレートの背景画像のパス
+  const templatePath = "./public/img/baseArticleImage.png"; // 背景画像のパス
 
   try {
     // 出力先のディレクトリがなかった場合は作成する
@@ -178,10 +178,10 @@ async function generateBlogThumbnails() {
       const thumbnailPath = path.join(thumbnailDir, `${blog.id}.webp`);
 
       // すでにサムネイルが存在する場合はスキップ（必要に応じてコメントアウト）
-      if (await fsExtra.pathExists(thumbnailPath)) {
-        console.log(`サムネイル already exists: ${blog.id}`);
-        continue;
-      }
+      // if (await fsExtra.pathExists(thumbnailPath)) {
+      //   console.log(`サムネイル already exists: ${blog.id}`);
+      //   continue;
+      // }
 
       // サムネイル生成
       await generateThumbnail({

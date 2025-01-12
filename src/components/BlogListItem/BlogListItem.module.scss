@@ -1,0 +1,17 @@
+.link {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.image {
+  margin-bottom: 4px;
+}
+.title {
+  font-size: 1.2rem;
+  padding: 0 4px;
+  line-height: 1.6;
+}
+.date {
+  font-size: 1.1rem;
+  padding: 0 4px;
+}

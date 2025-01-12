@@ -6,6 +6,14 @@ import Paragraph from "../../components/Paragraph/Paragraph.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getBlogDetail, getBlogs } from "../../library/microcms";
 
+const formatPublishedAt = (dateString: string): string => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${year}年${month}月${day}日`;
+};
+
 export async function getStaticPaths() {
 	const response = await getBlogs({ fields: ["id"] });
 	return response.contents.map((content: any) => ({
@@ -17,12 +25,13 @@ export async function getStaticPaths() {
 
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId as string);
+const formattedPublishedAt = formatPublishedAt(blog.publishedAt);
 ---
 
 <Layout title=`${blog.title} | Imoto Kazuya frontend portfolio site` description={blog.title}>
 	<MainContent>
-    <Heading text={blog.title} level="h2" />
-    <Paragraph level="p">公開日時：{blog.publishedAt}</Paragraph>
+    <Heading text={blog.title} level="h3" />
+    <!-- <Paragraph level="p">公開日：{formattedPublishedAt}</Paragraph> -->
 	<BlogContent />
   </MainContent>
 </Layout>

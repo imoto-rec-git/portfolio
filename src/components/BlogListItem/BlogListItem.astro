@@ -1,14 +1,28 @@
 ---
-interface Blog {
+import styles from "./BlogListItem.module.scss"
+
+type Blog = {
 	id: string;
 	title: string;
+	publishedAt: string;
 }
 
+const formatPublishedAt = (dateString: string): string => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${year}年${month}月${day}日`;
+};
+
 const { blog }: { blog: Blog } = Astro.props as { blog: Blog };
+const formattedPublishedAt = formatPublishedAt(blog.publishedAt);
 ---
 
 <li>
-  <a href={`/blog/${blog.id}`}>
-	<img src={`/public/img/article/${blog.id}.webp`} alt={blog.title}>
+  <a href={`/blog/${blog.id}`} class={styles.link}>
+	<img src={`/public/img/article/${blog.id}.webp`} alt={blog.title} class={styles.image}>
+	<p class={styles.date}>{formattedPublishedAt}</p>
+	<p class={styles.title}>{blog.title}</p>
   </a>
 </li>

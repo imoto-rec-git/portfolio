@@ -6,9 +6,10 @@ import styles from "./BlogList.module.scss"
 type BlogContent = {
 	id: string;
 	title: string;
+  publishedAt: string;
 };
 
-const response = await getBlogs({ fields: ["id", "title"] });
+const response = await getBlogs({ fields: ["id", "title", "publishedAt"] });
 ---
 
 <ul class={styles.list}>
