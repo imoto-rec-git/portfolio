@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import styles from "./BlogListItem.module.scss"
 
 type Blog = {
@@ -21,7 +22,7 @@ const formattedPublishedAt = formatPublishedAt(blog.publishedAt);
 
 <li>
   <a href={`/blog/${blog.id}`} class={styles.link}>
-	<img src={`/public/img/article/${blog.id}.webp`} alt={blog.title} class={styles.image}>
+	<Image src={`/public/img/article/${blog.id}.webp`} alt={blog.title} class={styles.image} width={335} height={227}>
 	<p class={styles.date}>{formattedPublishedAt}</p>
 	<p class={styles.title}>{blog.title}</p>
   </a>
