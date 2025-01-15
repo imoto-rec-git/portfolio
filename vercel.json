@@ -4,5 +4,16 @@
       "NODE_VERSION": "20",
       "NODE_OPTIONS": "--experimental-modules"
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+        }
+      ]
+    }
+  ]
 }
