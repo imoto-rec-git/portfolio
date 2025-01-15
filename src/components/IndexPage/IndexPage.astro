@@ -304,10 +304,10 @@ const projects: Project[] = [
         <div class={styles.item}>
             {project.link ? (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" class={styles.link}>
-                    <Image src={project.image} alt={project.alt} width={project.width} height={project.height} />
+                    <Image src={project.image} alt={project.alt} width={project.width} height={project.height} class={styles.image} />
                 </a>
             ) : (
-                <Image src={project.image} alt={project.alt} width={project.width} height={project.height} />
+                <Image src={project.image} alt={project.alt} width={project.width} height={project.height} class={styles.image} />
             )}
             <div class={styles.details}>
                 <h3 class={styles.title}>
