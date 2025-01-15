@@ -1,20 +1,20 @@
 ---
-import Image from "astro/components/Image.astro"
 import styles from "./IndexPage.module.scss"
-import lunchMapsImage from "../../../public/img/lunch_maps.jpg"
-import weatherWear from "../../../public/img/whether_wear.jpg"
-import hankoya from "../../../public/img/hankoya.jpg"
-import hankoyaCmp from "../../../public/img/hankoya_cmp.jpg"
-import mikomiru from "../../../public/img/mikomiru.jpg"
-import noImage from '../../../public/img/noimage.jpg'
-import colantotte from '../../../public/img/colantotte.jpg'
-import colantotteCmp1 from '../../../public/img/colantotte_cmp1.jpg'
-import colantotteCmp2 from '../../../public/img/colantotte_cmp2.jpg'
-import hoikoreNavi from '../../../public/img/hoikore_navi.jpg'
-import hoikoreInfo from '../../../public/img/hoikore_info.jpg'
-import auauau from '../../../public/img/auauau.jpg'
-import hoikoreHaken from '../../../public/img/hoikore_haken.jpg'
+import lunchMapsImage from "../../assets/lunch_maps.jpg"
+import weatherWear from "../../assets/whether_wear.jpg"
+import hankoya from "../../assets/hankoya.jpg"
+import hankoyaCmp from "../../assets/hankoya_cmp.jpg"
+import mikomiru from "../../assets/mikomiru.jpg"
+import noImage from '../../assets/noimage.jpg'
+import colantotte from '../../assets/colantotte.jpg'
+import colantotteCmp1 from '../../assets/colantotte_cmp1.jpg'
+import colantotteCmp2 from '../../assets/colantotte_cmp2.jpg'
+import hoikoreNavi from '../../assets/hoikore_navi.jpg'
+import hoikoreInfo from '../../assets/hoikore_info.jpg'
+import auauau from '../../assets/auauau.jpg'
+import hoikoreHaken from '../../assets/hoikore_haken.jpg'
 import HtmlContent from "../HtmlContent/HtmlContent"
+import { Picture } from "astro:assets"
 
 type Detail = {
   title: string;
@@ -43,8 +43,8 @@ const projects: Project[] = [
     name: "ECサイト フルリニューアル開発（2023年07月 〜 進行中） | iine.jp株式会社",
     image: noImage,
     alt: "ECサイト フルリニューアル開発",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     description: "海外EC事業を展開するクライアントの既存ECサイトのフルリニューアルプロジェクトに参画。<br />フロントエンドエンジニアとして以下の業務を担当しています。<br />リリース前案件のためURLの共有は控えさせていただきます。",
     overview:[
         {summary: '各ページの作成', detail: 'コンポーネント設計やカスタムフックを用いて実装'},{summary: 'フォーム開発', detail: 'React Hook FormとYupを活用した入力フォームの作成'}, {summary: 'テスト実装', detail: ' JestやReact Testing Libraryを使用したユニットテスト・結合テストの作成'},
@@ -72,8 +72,8 @@ const projects: Project[] = [
     name: "ECサイト内の特集ページ開発支援（2023年07月 〜 2024年08月）| iine.jp株式会社",
     image: noImage,
     alt: "ECサイト内の特集ページ開発支援（2023年07月 〜 2024年08月）| iine.jp株式会社",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     description: "コードレビューのレビュアーとして参画し、社内Webデザイナーが作成したコードの品質向上を支援。",
     overview:[
         {summary: 'コードレビューの実施', detail: 'Webデザイナーが作成したコードをレビューし、品質向上や技術指導'},
@@ -97,8 +97,8 @@ const projects: Project[] = [
     name: "Lunch Maps | Next.js/React 学習を兼ねた自主制作アプリ",
     image: lunchMapsImage,
     alt: "Lunch Maps",
-    width: 293,
-    height: 271,
+    width: 297,
+    height: 275,
     link: "https://main.dkpyfpx5izj45.amplifyapp.com/",
     description: "エリア検索や現在地の場所周辺でランチできるお店をピックアップしてくれるアプリです。<br />500m〜1km範囲内で、GoogleMapの口コミ情報を元に高評価または低価格で提供しているお店はマップ上で一目でわかるようにしています。<br />またログイン（Googleアカウント認証）することで、お店をお気に入り登録可能です。（お気に入りしたお店はマップ上でお気に入り専用のピンアイコンされます。）<br />React/Next.jsの学習も兼ねて自主制作したWebアプリケーションです。",
     details: [
@@ -118,8 +118,8 @@ const projects: Project[] = [
     name: "Weather Wear | React 学習を兼ねた自主制作アプリ",
     image: weatherWear,
     alt: "Weather Wear",
-    width: 293,
-    height: 271,
+    width: 297,
+    height: 275,
     link: "https://main.d33hf0l3u2s078.amplifyapp.com/",
     description: "今日の天気から服装を提示するアプリです。<br />Reactの学習も兼ねて自主制作したWebアプリケーションです。",
     details: [
@@ -135,8 +135,8 @@ const projects: Project[] = [
     name: "販促品・ノベルティの制作なら名入れ印刷サイト｜ミコミル（株式会社AmidA）",
     image: mikomiru,
     alt: "販促品・ノベルティの制作なら名入れ印刷サイト｜ミコミル（株式会社AmidA）",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: "https://www.mikomiru.com/",
     description: "販促品・ノベルティ販売のECサイト。<br />プロダクト立ち上げ当初から参加し、フロントエンド開発を担当（フロント面のプログラミング、カートのUI・UX設計〜実装、SSGの仕組み実装、CSS設計、レスポンシブコーディング、コーディング規約作成、サイト高速化の検証と実施、技術選定、デザイナーやバックエンドエンジニアとの連携など）<br />バックエンドエンジニア・デザイナーとチームを組み、アジャイル・スクラムで1週間単位のスプリントで開発していました。",
     job: [
@@ -160,8 +160,8 @@ const projects: Project[] = [
     name: "タンブラー名入れ印刷販売サイト | 名入れタンブラー館（株式会社AmidA）",
     image: noImage,
     alt: "タンブラー名入れ印刷販売サイト | 名入れタンブラー館（株式会社AmidA）",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     description: "タンブラー名入れ印刷専門のECサイト開発において、フロントエンド開発を担当しました。当初は Hugo を使用して開発を進めていましたが、途中から Next.js と React を導入し、サイトのリプレイス作業を主導しました。<br />上記記載のミコミルにタンブラー商品を移行したため、現在閲覧不可となっています。",
     overview:[
         {summary: 'レスポンシブコーディング', detail: '多端末対応を考慮したCSS設計と実装を担当'},
@@ -186,8 +186,8 @@ const projects: Project[] = [
     name: "ハンコヤドットコム 遠藤憲一出演CM特設ページ｜ハンコヤドットコム（株式会社AmidA）",
     image: hankoyaCmp,
     alt: "ハンコヤドットコム 遠藤憲一出演CM特設ページ｜ハンコヤドットコム（株式会社AmidA）",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: "https://www.hankoya.com/special/cm/",
     description: "ハンコヤドットコム CM特設サイト。コーディングを担当（レスポンシブコーディング、デザイナーとの連携など）",
     details: [
@@ -199,8 +199,8 @@ const projects: Project[] = [
     name: "ハンコヤドットコム ｜ハンコヤドットコム（株式会社AmidA）",
     image: hankoya,
     alt: "ハンコヤドットコム ｜ハンコヤドットコム（株式会社AmidA）",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: "https://www.hankoya.com/",
     description: "ハンコヤドットコム CM特設サイト。コーディングを担当（レスポンシブコーディング、デザイナーとの連携など）",
     details: [
@@ -212,8 +212,8 @@ const projects: Project[] = [
     name: "磁気ネックレスなど健康器具のECサイト | 株式会社コラントッテ",
     image: colantotte,
     alt: "磁気ネックレスなど健康器具のECサイト | 株式会社コラントッテ",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://www.colantotte.jp/',
     description: "自社ECサイトのキャンペーンや販売ページ、既存ページの調整などのレスポンシブコーディングや、Javascriptを使用したプログラミングなど担当いたしました。",
     details: [
@@ -225,8 +225,8 @@ const projects: Project[] = [
     name: "Craftsmanship 職人の技能・技巧 | 株式会社コラントッテ",
     image: colantotteCmp2,
     alt: "Craftsmanship 職人の技能・技巧 | 株式会社コラントッテ",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://www.colantotte.jp/special/craftsmanship',
     description: "コラントッテ特集ページです。レスポンシブコーディングやページ内の各アニメーション動作など実装。",
     details: [
@@ -237,8 +237,8 @@ const projects: Project[] = [
     name: "青山学院大学 陸上競技部（長距離ブロック）インタビュー特集ページ | 株式会社コラントッテ",
     image: colantotteCmp1,
     alt: "Craftsmanship 職人の技能・技巧 | 株式会社コラントッテ",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://www.colantotte.jp/special/agu-tf',
     description: "青山学院大学 陸上競技部（長距離ブロック）特集ページです。レスポンシブコーディングやページ内の各アニメーション動作など実装。",
     details: [
@@ -249,8 +249,8 @@ const projects: Project[] = [
     name: "ほいコレナビ | ベルサンテスタッフ株式会社",
     image: hoikoreNavi,
     alt: "ほいコレナビ | ベルサンテスタッフ株式会社",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://hoikucollection.jp/navi/2025/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けの新卒求人サイトの全ページのコーディングいたしました。レスポンシブのコーディングや、PHP/MySQLを使用し求人検索のプログラミングなどを行ってきました。※遷移先は2024年版となっておりますが、担当したページは2017年・2018年となります。（レイアウトやソースコードは現行ページとほぼ変わらない構造となっております。）",
     details: [
@@ -261,8 +261,8 @@ const projects: Project[] = [
     name: "ほいコレナビ 教えてinfo | ベルサンテスタッフ株式会社",
     image: hoikoreInfo,
     alt: "ほいコレナビ 教えてinfo | ベルサンテスタッフ株式会社",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://hoikucollection.jp/infomation/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けのブログのワイヤフレームの作成、全ページのコーディング、WordPressの構築など担当。",
     details: [
@@ -274,8 +274,8 @@ const projects: Project[] = [
     name: "ほいくのコレカラ あうあうあう | ベルサンテスタッフ株式会社",
     image: auauau,
     alt: "ほいくのコレカラ あうあうあう | ベルサンテスタッフ株式会社",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://hoikucollection.jp/korekara/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けのキュレーションサイトの全ページのコーディング、WordPressの構築など担当。",
     details: [
@@ -287,8 +287,8 @@ const projects: Project[] = [
     name: "ほいくコレクション | ベルサンテスタッフ株式会社",
     image: hoikoreHaken,
     alt: "ほいくコレクション | ベルサンテスタッフ株式会社",
-    width: 293,
-    height: 214,
+    width: 297,
+    height: 217,
     link: 'https://hoikucollection.jp/haken/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けの派遣求人サイトの新規ページのコーディングや既存ページの調整、PHP / MySQLを使用し求人検索のプログラミングなど担当。",
     details: [
@@ -304,10 +304,10 @@ const projects: Project[] = [
         <div class={styles.item}>
             {project.link ? (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" class={styles.link}>
-                    <Image src={project.image} alt={project.alt} width={project.width} height={project.height} class={styles.image} />
+                  <Picture src={project.image} formats={['avif', 'webp']} alt={project.alt} class={styles.image} />
                 </a>
             ) : (
-                <Image src={project.image} alt={project.alt} width={project.width} height={project.height} class={styles.image} />
+              <Picture src={project.image} formats={['avif', 'webp']} alt={project.alt} class={styles.image} />
             )}
             <div class={styles.details}>
                 <h3 class={styles.title}>
