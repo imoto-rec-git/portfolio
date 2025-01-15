@@ -17,7 +17,7 @@ const formatPublishedAt = (dateString: string): string => {
 
 const { blog }: { blog: Blog } = Astro.props as { blog: Blog };
 const formattedPublishedAt = formatPublishedAt(blog.publishedAt);
-const imageSrc = `/img/article/${blog.id}.webp`;
+const imageSrc = `/src/article/${blog.id}.webp`;
 ---
 
 <li>

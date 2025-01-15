@@ -169,7 +169,7 @@ async function generateBlogThumbnails() {
     });
 
     // サムネイル保存先ディレクトリ（public/にしていますが、src/でもOK）
-    const thumbnailDir = "./public/img/article";
+    const thumbnailDir = "./src/article";
     await fsExtra.ensureDir(thumbnailDir);
 
     // 各記事のサムネイルを生成
