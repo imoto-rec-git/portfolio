@@ -1,9 +1,11 @@
 ---
+import ExternalLink from "../ExternalLink/ExternalLink.astro";
 import FooterMenu from "../FooterMenu/FooterMenu.astro";
 import styles from "./Footer.module.scss";
 ---
 
 <footer class={styles.footer}>
+    <ExternalLink />
     <FooterMenu />
     <p><small>© CODED Kazuya Imoto - Front-End Developer site.</small></p>
 </footer>
