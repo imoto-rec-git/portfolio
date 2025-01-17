@@ -1,0 +1,12 @@
+---
+import styles from "./Logo.module.scss"
+import logoImage from "../../assets/logo.svg"
+import {  Picture } from "astro:assets"
+---
+
+<h1 class={styles.logo}>
+    <a href="/">
+        <Picture src={logoImage} formats={['avif', 'svg']} alt="coded" class={styles.image} />
+        <span>Kazuya Imoto - Front-End Developer site.</span>
+    </a>
+</h1>

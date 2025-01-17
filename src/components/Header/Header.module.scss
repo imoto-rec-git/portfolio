@@ -22,25 +22,3 @@
     align-items: flex-end;
   }
 }
-.logo {
-  display: block;
-  margin: auto;
-  padding: 0;
-  text-align: center;
-  font-size: 2rem;
-  letter-spacing: 1rem;
-  @include respond-to("laptop") {
-    text-align: right;
-    margin: 0;
-  }
-}
-.logo span {
-  display: block;
-  font-size: 1rem;
-  letter-spacing: 0.3rem;
-  padding-right: 0;
-  text-align: center;
-  @include respond-to("laptop") {
-    text-align: right;
-  }
-}

@@ -1,0 +1,31 @@
+@use "../../styles/breakpoints" as *;
+
+.logo {
+  margin: auto;
+  font-size: 2rem;
+  @include respond-to("laptop") {
+    display: block;
+    margin: 0 0 6px;
+  }
+}
+.image {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 6px;
+  @include respond-to("laptop") {
+    width: 130px;
+    margin: 0 0 6px;
+  }
+}
+.logo span {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  padding-right: 0;
+  text-align: center;
+  color: #555555;
+  @include respond-to("laptop") {
+    text-align: right;
+  }
+}
