@@ -1,10 +1,14 @@
 ---
 import styles from "./ExternalLink.module.scss"
 import github from "../../assets/github-mark.svg"
+import x from "../../assets/x-mark.svg"
 import { Picture } from "astro:assets"
 ---
 <div class={styles.container}>
     <a href="https://github.com/imoto-rec-git" target="_blank" rel="noopener noreferrer" class={styles.link}>
         <Picture src={github} formats={['avif', 'svg']} alt="github" class={styles.image} />
+    </a>
+    <a href="https://x.com/k_imoto_fe" target="_blank" rel="noopener noreferrer" class={styles.link}>
+        <Picture src={x} formats={['avif', 'svg']} alt="github" class={styles.image} />
     </a>
 </div>
