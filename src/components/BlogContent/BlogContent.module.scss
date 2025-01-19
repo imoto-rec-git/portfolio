@@ -5,38 +5,65 @@
 }
 
 .post {
-  & > h3 {
-    font-size: 1.8rem;
+  & > h2 {
+    font-size: 2rem;
     border-bottom: 1px solid #d6e3ed;
     padding-bottom: 6px;
     margin: 20px 0;
     font-weight: 800;
     @include respond-to("laptop") {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
+    }
+  }
+  & > h3 {
+    font-size: 1.6rem;
+    margin: 16px 0;
+    font-weight: 800;
+    @include respond-to("laptop") {
+      font-size: 2.2rem;
     }
   }
   & > p {
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin: 12px 0;
     @include respond-to("laptop") {
       font-size: 1.6rem;
-      line-height: 1.5;
-    }
-    > code {
-      font-size: 1.2rem;
-      background-color: #333333;
-      color: #dfdfdf;
-      padding: 2px 4px;
-      line-height: 1;
+      line-height: 1.8;
     }
   }
-  & > ul,
-  > ol {
+  & code {
+    font-size: 1.2rem;
+    background-color: #333333;
+    color: #dfdfdf;
+    padding: 2px 4px;
+    line-height: 1;
+  }
+  & strong {
+    font-weight: 600;
+  }
+  & ul,
+  & ol {
     font-size: 1.4rem;
     line-height: 1.5;
     @include respond-to("laptop") {
       font-size: 1.6rem;
       line-height: 1.5;
+    }
+  }
+  & ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  & ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  & ul li,
+  & ol li {
+    line-height: 1.8;
+    &:not(:last-of-type) {
+      margin-bottom: 6px;
     }
   }
   & figure {
