@@ -1,0 +1,33 @@
+@use "../../styles/breakpoints" as *;
+
+.profile {
+  margin-top: 18px;
+  @include respond-to("laptop") {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.name {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+.sub {
+  padding-left: 14px;
+}
+.link {
+  text-decoration: underline;
+}
+.list {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  font-size: 1.2rem;
+  row-gap: 6px;
+}
