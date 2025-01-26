@@ -1,5 +1,7 @@
+@use "../../styles/breakpoints" as *;
+
 .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 40px;
 }

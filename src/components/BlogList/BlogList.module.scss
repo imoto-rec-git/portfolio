@@ -1,10 +1,11 @@
 @use "../../styles/breakpoints" as *;
 
 .list {
+  display: grid;
+  row-gap: 40px;
   margin-top: 20px;
   @include respond-to("laptop") {
-    display: grid;
-    gap: 40px;
+    gap: 30px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
