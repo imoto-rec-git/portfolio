@@ -1,27 +1,31 @@
 @use "../../styles/breakpoints" as *;
 
 .container {
-  margin-top: 20px;
+  margin-top: 30px;
+  @include respond-to("laptop") {
+    margin-top: 60px;
+  }
 }
 
 .post {
-  & > h2 {
-    font-size: 2rem;
+  & > h3 {
+    font-size: 1.8rem;
     border-bottom: 1px solid #d6e3ed;
     padding-bottom: 6px;
     margin: 20px 0;
-    font-weight: 800;
+    font-weight: 600;
     @include respond-to("laptop") {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       margin: 64px 0 16px;
     }
   }
-  & > h3 {
+  & > h4 {
     font-size: 1.6rem;
     margin: 16px 0;
-    font-weight: 800;
+    font-weight: 600;
     @include respond-to("laptop") {
-      font-size: 2.2rem;
+      font-size: 2rem;
+      margin: 32px 0 12px;
     }
   }
   & > p {
@@ -72,7 +76,7 @@
     text-align: center;
   }
   & img {
-    max-width: 860px;
+    max-width: 720px;
     width: 100%;
     height: auto;
   }
@@ -97,6 +101,9 @@
   th,
   td {
     border: 1px solid #a5a5a5;
+  }
+  table {
+    width: 100%;
   }
   th,
   td {
