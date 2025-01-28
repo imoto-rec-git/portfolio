@@ -5,9 +5,9 @@
   @include respond-to("laptop") {
     grid-template-columns: auto 1fr;
     column-gap: 18px;
-    row-gap: 16px;
+    row-gap: 14px;
     display: grid;
-    margin-top: 38px;
+    margin-top: 40px;
   }
 }
 .summary {
