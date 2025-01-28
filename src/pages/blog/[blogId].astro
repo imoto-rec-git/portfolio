@@ -26,9 +26,12 @@ export async function getStaticPaths() {
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId as string);
 const formattedPublishedAt = formatPublishedAt(blog.publishedAt);
+
+// OGP画像URLを生成
+const ogpImageUrl = `/img/ogp/${blogId}.webp`;
 ---
 
-<Layout title=`${blog.title} | Imoto Kazuya frontend portfolio site` description={blog.title}>
+<Layout title=`${blog.title} | Imoto Kazuya frontend portfolio site` description={blog.title} ogImage={ogpImageUrl}>
 	<MainContent>
     <Heading text={blog.title} level="h2" />
     <Paragraph level="p">公開日：{formattedPublishedAt}</Paragraph>

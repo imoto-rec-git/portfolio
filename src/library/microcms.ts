@@ -151,37 +151,75 @@ async function generateThumbnail({
   }
 }
 
-// サムネイルを自動で生成する関数
+// OGP画像を生成する関数
+async function generateOGPImage({
+  title,
+  outputFilePath,
+}: GenerateThumbnailParams): Promise<void> {
+  const ogpTemplatePath = "./public/img/baseOGPImage.png"; // OGP用背景画像パス
+
+  try {
+    const outputDir = path.dirname(outputFilePath);
+    await fsExtra.ensureDir(outputDir);
+
+    // テキスト分割（OGP用の幅指定）
+    const font = "60px Noto Sans JP"; // OGP用フォントサイズ
+    const lines = splitTextByWidth(title, 700, font);
+
+    // SVGでOGP用のテキストを作成
+    const ogpSvg = `
+    <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .title {
+          font-size: 60px;
+          font-family: Noto Sans JP;
+          font-weight: bold;
+          fill: black;
+        }
+      </style>
+      <rect width="1200" height="630" fill="transparent" />
+      ${(() => {
+        const lineHeight = 80;
+        const totalTextHeight = lines.length * lineHeight;
+        const startY = (600 - totalTextHeight) / 2 + lineHeight;
+        return lines
+          .map(
+            (line, index) =>
+              `<text x="100" y="${startY + index * lineHeight}" class="title">${line}</text>`
+          )
+          .join("\n");
+      })()}
+    </svg>
+    `;
+    const textBuffer = Buffer.from(ogpSvg);
+
+    // 背景画像にSVGを合成
+    await sharp(ogpTemplatePath)
+      .composite([{ input: textBuffer, blend: "over" }])
+      .toFile(outputFilePath);
+
+    console.log(`OGP画像生成成功: ${outputFilePath}`);
+  } catch (error) {
+    console.error("OGP画像生成中にエラー発生:", error);
+  }
+}
+
+// ブログ記事のOGP画像も生成する処理を追加
 async function generateBlogThumbnails() {
   try {
-    // microCMSクライアントの作成
-    const client = createClient({
-      serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
-      apiKey: import.meta.env.MICROCMS_API_KEY,
-    });
-
-    // ブログ記事を取得
     const blogs = await client.get({
-      endpoint: "blogs", // エンドポイント（例なので変更してください）
-      queries: {
-        limit: 100, // 取得する記事数（必要に応じて調整）
-      },
+      endpoint: "blogs",
+      queries: { limit: 100 },
     });
 
-    // サムネイル保存先ディレクトリ（public/にしていますが、src/でもOK）
     const thumbnailDir = "./public/img/article";
+    const ogpDir = "./public/img/ogp";
     await fsExtra.ensureDir(thumbnailDir);
+    await fsExtra.ensureDir(ogpDir);
 
-    // 各記事のサムネイルを生成
     for (const blog of blogs.contents) {
-      // サムネイルのファイル名を記事IDから生成
       const thumbnailPath = path.join(thumbnailDir, `${blog.id}.webp`);
-
-      // すでにサムネイルが存在する場合はスキップ（必要に応じてコメントアウト）
-      // if (await fsExtra.pathExists(thumbnailPath)) {
-      //   console.log(`サムネイル already exists: ${blog.id}`);
-      //   continue;
-      // }
+      const ogpPath = path.join(ogpDir, `${blog.id}.webp`);
 
       // サムネイル生成
       await generateThumbnail({
@@ -189,10 +227,16 @@ async function generateBlogThumbnails() {
         outputFilePath: thumbnailPath,
       });
 
-      console.log(`サムネイル自動生成完了: ${blog.id}`);
+      // OGP画像生成
+      await generateOGPImage({
+        title: blog.title,
+        outputFilePath: ogpPath,
+      });
+
+      console.log(`ブログID: ${blog.id} の画像生成完了`);
     }
   } catch (error) {
-    console.error("サムネイル自動生成中にエラー発生:", error);
+    console.error("画像生成中にエラー発生:", error);
   }
 }
 
