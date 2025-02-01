@@ -1,11 +1,11 @@
 ---
 import { Picture } from "astro:assets"
 import styles from "./Profile.module.scss"
-import profile from "../../assets/profile.png"
+import profile from "../../assets/profile.jpg"
 ---
 
 <div class={styles.profile}>
-    <Picture src={profile} formats={['avif', 'png']} alt="イモトカズヤのプロフィール画像" class={styles.image} />
+    <Picture src={profile} formats={['avif', 'jpg']} alt="イモトカズヤのプロフィール画像" class={styles.image} />
     <div>
         <p class={styles.name}>イモト カズヤ<span class={styles.sub}>Imoto Kazuya</span></p>
         <dl class={styles.list}>
@@ -13,6 +13,8 @@ import profile from "../../assets/profile.png"
             <dd class={styles.detail}><a href="https://github.com/imoto-rec-git" target="_blank" rel="noopener noreferrer" class={styles.link}>imoto-rec-git</a></dd>
             <dt class={styles.summary}>X:</dt>
             <dd class={styles.detail}><a href="https://x.com/k_imoto_fe" target="_blank" rel="noopener noreferrer" class={styles.link}>@k_imoto_fe</a></dd>
+            <dt class={styles.summary}>Zenn:</dt>
+            <dd class={styles.detail}><a href="https://zenn.dev/k_imoto" target="_blank" rel="noopener noreferrer" class={styles.link}>k.imoto</a></dd>
         </dl>
     </div>
 </div>

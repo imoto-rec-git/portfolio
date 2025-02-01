@@ -1,19 +1,30 @@
 @use "../../styles/breakpoints" as *;
 
 .profile {
-  margin-top: 18px;
+  margin-top: 40px;
+  display: grid;
+  justify-content: center;
+  gap: 10px;
   @include respond-to("laptop") {
-    margin-top: 60px;
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 200px 1fr;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 20px;
   }
 }
 .image {
+  display: grid;
+  justify-content: center;
+  max-width: 200px;
   width: 100%;
   height: auto;
+  @include respond-to("laptop") {
+    max-width: auto;
+    width: 100%;
+    height: auto;
+  }
 }
 .name {
   font-size: 1.4rem;
