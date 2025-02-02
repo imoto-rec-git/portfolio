@@ -13,6 +13,8 @@
   height: auto;
   display: block;
   margin: 0 auto 6px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(29%) saturate(918%)
+    hue-rotate(319deg) brightness(98%) contrast(72%);
   @include respond-to("laptop") {
     width: 130px;
     margin: 0 0 6px;
@@ -24,7 +26,7 @@
   letter-spacing: 0.3rem;
   padding-right: 0;
   text-align: center;
-  color: #555555;
+  color: #d8d3c3;
   @include respond-to("laptop") {
     text-align: right;
   }

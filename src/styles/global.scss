@@ -45,9 +45,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #333;
+  color: #d8d3c3;
+  background: #2c2c2c;
   row-gap: 20px;
+  font-weight: 300;
   @include respond-to("laptop") {
     row-gap: 40px;
   }
 }
+
+/*
+サイトカラー候補１
+ベージュ：#F9F0E3
+ブラック：#000000
+ホワイト：#FFFFFF
+
+サイトカラー候補２
+ベージュ：#C9C2AC
+ブラック：#212121
+
+*/

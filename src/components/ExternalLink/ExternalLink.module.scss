@@ -10,4 +10,6 @@
 .image {
   width: 24px;
   height: auto;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(29%) saturate(918%)
+    hue-rotate(319deg) brightness(98%) contrast(72%);
 }

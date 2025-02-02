@@ -1,10 +1,15 @@
 @use "../../styles/breakpoints" as *;
 
 .item {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
+  flex-grow: 1;
+  text-align: center;
   @include respond-to("laptop") {
     font-size: 1.4rem;
   }
+}
+.item + .item {
+  border-left: 1px dotted #707070;
 }

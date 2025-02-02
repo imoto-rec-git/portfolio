@@ -1,12 +1,12 @@
 @use "../../styles/breakpoints" as *;
 
 .header {
-  background-color: #fff;
   height: 100%;
   width: 100%;
   margin-top: 20px;
   @include respond-to("laptop") {
     display: block;
+    margin-top: 40px;
   }
 }
 .headline {

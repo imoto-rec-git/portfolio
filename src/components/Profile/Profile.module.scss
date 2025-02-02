@@ -1,12 +1,10 @@
 @use "../../styles/breakpoints" as *;
 
 .profile {
-  margin-top: 40px;
   display: grid;
   justify-content: center;
   gap: 10px;
   @include respond-to("laptop") {
-    margin-top: 50px;
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: flex-start;

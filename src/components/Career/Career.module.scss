@@ -7,14 +7,17 @@
     column-gap: 18px;
     row-gap: 14px;
     display: grid;
-    margin-top: 40px;
   }
 }
 .summary {
   font-size: 1.4rem;
-  margin-top: 18px;
+  &:not(:first-of-type) {
+    margin-top: 18px;
+  }
   @include respond-to("laptop") {
-    margin-top: 0;
+    &:not(:first-of-type) {
+      margin-top: 0;
+    }
   }
 }
 .detail {

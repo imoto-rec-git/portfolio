@@ -1,5 +1,6 @@
 ---
 import BlogContent from "../../components/BlogContent/BlogContent.astro";
+import Container from "../../components/Container/Container.astro";
 import Heading from "../../components/Heading/Heading.astro";
 import MainContent from "../../components/MainContent/MainContent.astro";
 import Paragraph from "../../components/Paragraph/Paragraph.astro";
@@ -35,6 +36,8 @@ const ogpImageUrl = `/img/ogp/${blogId}.webp`;
 	<MainContent>
     <Heading text={blog.title} level="h2" />
     <Paragraph level="p">公開日：{formattedPublishedAt}</Paragraph>
-    <BlogContent />
+    <Container>
+      <BlogContent />
+    </Container>
   </MainContent>
 </Layout>

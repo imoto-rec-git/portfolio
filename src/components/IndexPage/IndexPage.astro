@@ -1,8 +1,8 @@
 ---
 import styles from "./IndexPage.module.scss"
 import ist from "../../assets/ist.jpg"
-import lunchMapsImage from "../../assets/lunch_maps.jpg"
-import weatherWear from "../../assets/whether_wear.jpg"
+import lunchMapsImage from "../../assets/lunch_maps.png"
+import weatherWear from "../../assets/weather_wear.png"
 import hankoya from "../../assets/hankoya.jpg"
 import hankoyaCmp from "../../assets/hankoya_cmp.jpg"
 import mikomiru from "../../assets/mikomiru.jpg"
@@ -16,6 +16,7 @@ import auauau from '../../assets/auauau.jpg'
 import hoikoreHaken from '../../assets/hoikore_haken.jpg'
 import HtmlContent from "../HtmlContent/HtmlContent"
 import { Picture } from "astro:assets"
+import Container from "../Container/Container.astro"
 
 type Detail = {
   title: string;
@@ -75,7 +76,7 @@ const projects: Project[] = [
     alt: "ECサイト内の特集ページ開発支援（2023年07月 〜 2024年08月）| iine.jp株式会社",
     width: 297,
     height: 217,
-    description: "フロントエンドの技術的リーダーとして、規約策定やコードレビューを主導。社内Webデザイナーやジュニアエンジニアが作成したコードの品質向上とスキルアップを支援。",
+    description: "フロントエンドの技術的リーダーとして、規約策定やコードレビューを主導。<br />社内Webデザイナーやジュニアエンジニアが作成したコードの品質向上とスキルアップを支援。",
     overview:[
         {summary: 'コードレビューの実施', detail: 'Webデザイナーが作成したコードをレビューし、品質向上や技術指導'},
         {summary: 'コーディング規約の策定', detail: 'チーム全体で一貫性のあるコードを保つため、BEM記法やJavaScriptのベストプラクティスを基に規約を作成'},
@@ -311,7 +312,7 @@ const projects: Project[] = [
 ];
 ---
 
-<div class={styles.content}>
+<Container>
     {projects.map((project) => (
         <div class={styles.item}>
             {project.link ? (
@@ -380,4 +381,4 @@ const projects: Project[] = [
             </div>
         </div>
     ))}
-</div>
+</Container>

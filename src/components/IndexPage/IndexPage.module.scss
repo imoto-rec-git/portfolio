@@ -1,13 +1,5 @@
 @use "../../styles/breakpoints" as *;
 
-.content {
-  margin-top: 40px;
-  display: grid;
-  gap: 40px;
-  @include respond-to("laptop") {
-    gap: 80px;
-  }
-}
 .link {
   text-align: center;
   text-decoration: underline;
@@ -19,13 +11,14 @@
 .image {
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 .item {
   display: grid;
   gap: 20px;
   @include respond-to("laptop") {
-    grid-template-columns: 297px auto;
-    gap: 40px;
+    grid-template-columns: 280px auto;
+    gap: 20px;
   }
 }
 .details {
@@ -33,12 +26,12 @@
   gap: 10px;
 }
 .title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 .list {
   display: grid;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   gap: 5px;
   @include respond-to("laptop") {
     gap: 6px;

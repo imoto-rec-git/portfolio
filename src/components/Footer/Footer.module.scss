@@ -1,9 +1,13 @@
+@use "../../styles/breakpoints" as *;
+
 .footer {
-  margin: 5rem auto 0;
   max-width: 960px;
   width: 100%;
   position: sticky;
   top: 100vh;
+  @include respond-to("laptop") {
+    margin: 0 auto;
+  }
 }
 .footer p {
   font-size: 1.2rem;

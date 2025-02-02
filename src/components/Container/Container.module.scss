@@ -1,0 +1,16 @@
+@use "../../styles/breakpoints" as *;
+
+.container {
+  margin-top: 10px;
+  display: grid;
+  gap: 40px;
+  padding: 15px;
+  background: #212121;
+  border-radius: 10px;
+  color: #faf9f7;
+  @include respond-to("laptop") {
+    gap: 120px;
+    margin-top: 20px;
+    padding: 30px;
+  }
+}
