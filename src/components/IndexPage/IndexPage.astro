@@ -61,8 +61,8 @@ const projects: Project[] = [
       {title: '役割', content: 'メンバー'}
     ],
     details: [
-      { title: "言語", content: "TypeScript、HTML、SCSS" },
-      { title: "フレームワーク", content: "Next.js、React、CSS Modules" },
+      { title: "言語", content: "TypeScript、HTML、CSS" },
+      { title: "フレームワーク・プリプロセッサ", content: "Next.js、SCSS" },
       { title: "テスト", content: "Jest、React Testing Library（Unit Test、Integration Test）、Playwright（E2E）"},
       { title: "API", content: "GraphQL"},
       { title: "バージョン管理", content: "GitLab"},
@@ -90,7 +90,8 @@ const projects: Project[] = [
       {title: '役割', content: 'テックリード'}
     ],
     details: [
-      { title: "言語", content: "HTML、SCSS、JavaScript" },
+      { title: "言語", content: "HTML、CSS、JavaScript" },
+      { title: "プリプロセッサ", content: "SCSS" },
       { title: "バージョン管理", content: "GitLab"},
       { title: "コミュニケーションツール", content: "MatterMost、Jitsi"}
     ],
@@ -136,13 +137,13 @@ const projects: Project[] = [
     alt: "タンブラー名入れ印刷販売サイト | 名入れタンブラー館（株式会社AmidA）",
     width: 297,
     height: 217,
-    description: "タンブラー名入れ印刷専門のECサイト開発において、フロントエンド開発を担当しました。当初は Hugo を使用して開発を進めていましたが、途中から Next.js と React を導入し、サイトのリプレイス作業を主導しました。<br />上記記載のミコミルにタンブラー商品を移行したため、現在閲覧不可となっています。",
+    description: "タンブラー名入れ印刷専門のECサイト開発において、フロントエンド開発を担当。<br />HugoからNext.js へ移行のためリプレイス作業対応。<br />上記別サイトへ移行のため、現在閲覧不可となっています。",
     overview:[
-        {summary: 'レスポンシブコーディング', detail: '多端末対応を考慮したCSS設計と実装を担当'},
-        {summary: 'CSS設計・コーディング規約の作成', detail: 'SCSSを活用した効率的なスタイル管理を実現し、コーディング規約を策定してチーム内での統一を図りました'},
-        {summary: 'サイト高速化の検証と実施', detail: 'パフォーマンス改善のための検証と最適化を実施'},
-        {summary: 'デザイナーとの連携', detail: 'デザインと開発の間の橋渡しを行い、UI/UXを向上'},
-        {summary: 'HugoからNext.jsへのリプレイス', detail: 'サイトのモダン化を目指し、ReactとNext.jsを活用して再構築を推進'},
+        {summary: 'コーディング', detail: '多端末対応を考慮した実装'},
+        {summary: 'CSS設計・コーディング規約策定', detail: 'BEMの導入、コーディング規約を策定してチーム内で統一'},
+        {summary: '表示速度の改善', detail: 'CSL・Core Web Vitals等のページ速度・ユーザー体験の向上'},
+        {summary: 'デザイナー・SEOチームとの連携', detail: 'UI/UX改善のためデザイナーと連携や検索結果向上の施策でSEOチームとの連携を実施'},
+        {summary: 'リプレイス', detail: '動的コンテンツの追加やAPI連携のため、HugoからNext.jsへの再構築'},
     ],
     job: [
       {title: '職種', content: 'フロントエンドエンジニア'}
@@ -151,22 +152,12 @@ const projects: Project[] = [
       {title: '役割', content: 'メンバー'}
     ],
     details: [
-      { title: "言語・フレームワークなど", content: "React / Next.js /Hugo / TypeScript / JavaScript(ES6) / HTML / SASS" },
-      { title: "開発環境", content: "VSCode / GitLab / SourceTree" },
-      {title: "開発手法", content: "アジャイル開発 / スクラム"}
-    ],
-  },
-  {
-    name: "ハンコヤドットコム 遠藤憲一出演CM特設ページ｜ハンコヤドットコム（株式会社AmidA）",
-    image: hankoyaCmp,
-    alt: "ハンコヤドットコム 遠藤憲一出演CM特設ページ｜ハンコヤドットコム（株式会社AmidA）",
-    width: 297,
-    height: 217,
-    link: "https://www.hankoya.com/special/cm/",
-    description: "ハンコヤドットコム CM特設サイト。コーディングを担当（レスポンシブコーディング、デザイナーとの連携など）",
-    details: [
-      { title: "言語・フレームワークなど", content: "HTML / SASS(SCSS) / JavaScript" },
-      { title: "開発環境", content: "VSCode / SVN / Jenkins" },
+      { title: "言語", content: "TypeScript、HTML、CSS" },
+      { title: "ライブラリ・フレームワーク", content: "Next.js、Hugo、SCSS" },
+      { title: "バージョン管理", content: "GitLab" },
+      { title: "開発手法", content: "アジャイル開発、スクラム"},
+      { title: "IDE", content: "VSCode" },
+      { title: "コミュニケーション", content: "Slack、Zoom" },
     ],
   },
   {
@@ -176,10 +167,14 @@ const projects: Project[] = [
     width: 297,
     height: 217,
     link: "https://www.hankoya.com/",
-    description: "ハンコヤドットコム CM特設サイト。コーディングを担当（レスポンシブコーディング、デザイナーとの連携など）",
+    description: "TOPページのファーストビュー改修、特設ページ追加、検索機能の改修",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML / CSS / JavaScript / PHP" },
-      { title: "開発環境", content: "VSCode / SVN / Jenkins" },
+      { title: "言語", content: "HTML、CSS、JavaScript、PHP" },
+      { title: "プリプロセッサ・CMS", content: "SCSS、PowerCMS" },
+      { title: "バージョン管理", content: "SVN" },
+      { title: "開発手法", content: "アジャイル、スクラム" },
+      { title: "IDE", content: "VSCode" },
+      { title: "コミュニケーション", content: "Slack、Zoom" },
     ],
   },
   {
@@ -189,10 +184,10 @@ const projects: Project[] = [
     width: 297,
     height: 217,
     link: 'https://www.colantotte.jp/',
-    description: "自社ECサイトのキャンペーンや販売ページ、既存ページの調整などのレスポンシブコーディングや、Javascriptを使用したプログラミングなど担当いたしました。",
+    description: "自社ECサイトのキャンペーンや販売ページ、既存ページの調整などのレスポンシブコーディングや、Javascriptを使用したプログラミングなど担当。",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery" },
-      { title: "ツール", content: "Atom / Gulp / Git / SourceTree / Photoshop CC / Illustrator CC" },
+      { title: "言語・ライブラリ", content: "HTML、CSS、Javascript、jQuery" },
+      { title: "ツール", content: "Atom、Gulp、Git、SourceTree、Photoshop CC、Illustrator CC" },
     ],
   },
   {
@@ -204,7 +199,7 @@ const projects: Project[] = [
     link: 'https://www.colantotte.jp/special/craftsmanship',
     description: "コラントッテ特集ページです。レスポンシブコーディングやページ内の各アニメーション動作など実装。",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery" },
+      { title: "言語・フレームワークなど", content: "HTML、CSS、Javascript、jQuery" },
     ],
   },
   {
@@ -216,7 +211,7 @@ const projects: Project[] = [
     link: 'https://www.colantotte.jp/special/agu-tf',
     description: "青山学院大学 陸上競技部（長距離ブロック）特集ページです。レスポンシブコーディングやページ内の各アニメーション動作など実装。",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery" },
+      { title: "言語・ライブラリ", content: "HTML5、CSS3、Javascript、jQuery" },
     ],
   },
   {
@@ -228,7 +223,7 @@ const projects: Project[] = [
     link: 'https://hoikucollection.jp/navi/2025/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けの新卒求人サイトの全ページのコーディングいたしました。レスポンシブのコーディングや、PHP/MySQLを使用し求人検索のプログラミングなどを行ってきました。※遷移先は2024年版となっておりますが、担当したページは2017年・2018年となります。（レイアウトやソースコードは現行ページとほぼ変わらない構造となっております。）",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery / PHP / MySQL" },
+      { title: "言語・ライブラリ", content: "HTML、CSS、Javascript、jQuery、PHP、MySQL" },
     ],
   },
   {
@@ -240,8 +235,8 @@ const projects: Project[] = [
     link: 'https://hoikucollection.jp/infomation/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けのブログのワイヤフレームの作成、全ページのコーディング、WordPressの構築など担当。",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery /  WordPress" },
-      { title: "ツール", content: "Dreamweaver CS6 / Illustrator CS6" },
+      { title: "言語・ライブラリ・CMS", content: "HTML、CSS、Javascript、jQuery、WordPress" },
+      { title: "ツール", content: "Dreamweaver CS6、Illustrator CS6" },
     ],
   },
   {
@@ -253,8 +248,8 @@ const projects: Project[] = [
     link: 'https://hoikucollection.jp/korekara/',
     description: "ベルサンテスタッフ株式会社様が運営している保育士向けのキュレーションサイトの全ページのコーディング、WordPressの構築など担当。",
     details: [
-      { title: "言語・フレームワークなど", content: "HTML5 / CSS3 / Javascript / jQuery /  WordPress" },
-      { title: "ツール", content: "Dreamweaver CS6" },
+      { title: "言語・ライブラリ・CMS", content: "HTML、CSS、Javascript、jQuery、WordPress" },
+      { title: "IDE", content: "Dreamweaver CS6" },
     ],
   },
   {
@@ -264,10 +259,10 @@ const projects: Project[] = [
     width: 297,
     height: 217,
     link: 'https://hoikucollection.jp/haken/',
-    description: "ベルサンテスタッフ株式会社様が運営している保育士向けの派遣求人サイトの新規ページのコーディングや既存ページの調整、PHP / MySQLを使用し求人検索のプログラミングなど担当。",
+    description: "ベルサンテスタッフ株式会社様が運営している保育士向けの派遣求人サイトの新規ページのコーディングや既存ページの調整、PHP、MySQLを使用し求人検索のプログラミングなど担当。",
     details: [
-      { title: "言語・フレームワークなど", content: "XHTML / CSS / Javascript / jQuery / PHP / MySQL" },
-      { title: "ツール", content: "Dreamweaver CS6" },
+      { title: "言語・ライブラリ・SQL", content: "XHTML、CSS、Javascript、jQuery、PHP、MySQL" },
+      { title: "IDE", content: "Dreamweaver CS6" },
     ],
   },
   {
@@ -279,9 +274,9 @@ const projects: Project[] = [
     link: "https://main.dkpyfpx5izj45.amplifyapp.com/",
     description: "エリア検索や現在地の場所周辺でランチできるお店をピックアップしてくれるアプリです。<br />500m〜1km範囲内で、GoogleMapの口コミ情報を元に高評価または低価格で提供しているお店はマップ上で一目でわかるようにしています。<br />またログイン（Googleアカウント認証）することで、お店をお気に入り登録可能です。（お気に入りしたお店はマップ上でお気に入り専用のピンアイコンされます。）<br />React/Next.jsの学習も兼ねて自主制作したWebアプリケーションです。",
     details: [
-      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / グローバルステート(useContext) / TypeScript / Emotion" },
+      { title: "言語・フレームワークなど", content: "Next.js、React Hooks、グローバルステート(useContext)、TypeScript、Emotion" },
       { title: "IDE", content: "VSCode" },
-      { title: "API", content: "GoogleMapsPlatform（Maps JavaScript API / Places API / Directions API / Geocoding API）/ GeoLocation API"},
+      { title: "API", content: "GoogleMapsPlatform（Maps JavaScript API、Places API、Directions API、Geocoding API）/ GeoLocation API"},
       { title: "データベース", content: "FireStore"},
       { title: "ユーザー認証", content: "Firebase Authentication"},
       { title: "ホスティング", content: "AWS Amplify"},
@@ -300,9 +295,9 @@ const projects: Project[] = [
     link: "https://main.d33hf0l3u2s078.amplifyapp.com/",
     description: "今日の天気から服装を提示するアプリです。<br />Reactの学習も兼ねて自主制作したWebアプリケーションです。",
     details: [
-      { title: "言語・フレームワークなど", content: "Next.js / React Hooks / TypeScript / Emotion" },
+      { title: "言語・フレームワークなど", content: "Next.js、React Hooks、TypeScript、Emotion" },
       { title: "IDE", content: "VSCode" },
-      { title: "API", content: "Weather Forecast API / GeoLocation API"},
+      { title: "API", content: "Weather Forecast API、GeoLocation API"},
       { title: "ホスティング", content: "AWS Amplify"},
     ],
     github: "https://github.com/imoto-rec-git/weather_wear",
