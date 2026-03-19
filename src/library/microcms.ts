@@ -6,10 +6,16 @@ import { createClient } from "microcms-js-sdk";
 import sharp from "sharp";
 import path from "path";
 
-const client = createClient({
-  serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
-  apiKey: import.meta.env.MICROCMS_API_KEY,
-});
+const serviceDomain = import.meta.env.MICROCMS_SERVICE_DOMAIN;
+const apiKey = import.meta.env.MICROCMS_API_KEY;
+
+if (!serviceDomain || !apiKey) {
+  throw new Error(
+    "環境変数 MICROCMS_SERVICE_DOMAIN と MICROCMS_API_KEY を設定してください。"
+  );
+}
+
+const client = createClient({ serviceDomain, apiKey });
 
 //型定義
 export type Blog = {
