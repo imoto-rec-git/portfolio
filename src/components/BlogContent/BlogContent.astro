@@ -4,6 +4,7 @@ import styles from "./BlogContent.module.scss"
 import { load } from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/vs2015.css";
+import DOMPurify from "isomorphic-dompurify";
 
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId as string);
@@ -15,7 +16,7 @@ $("pre code").each((_, elm) => {
   $(elm).html(result.value);
   $(elm).addClass("hljs");
 });
-blog.content = $.html();
+blog.content = DOMPurify.sanitize($.html());
 ---
 
 <div class={styles.post} set:html={blog.content} />
