@@ -17,7 +17,7 @@
     "@astrojs/sitemap": "3.7.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.0.8",
+    "astro": "^6.1.1",
     "astro-google-analytics": "^1.0.3",
     "canvas": "^3.2.2",
     "cheerio": "^1.2.0",
