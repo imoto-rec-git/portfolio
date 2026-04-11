@@ -26,8 +26,8 @@
     "highlight.js": "^11.11.1",
     "isomorphic-dompurify": "^3.8.0",
     "microcms-js-sdk": "^3.3.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "sharp": "^0.34.5",
     "the-new-css-reset": "^1.11.3",
     "typescript": "^6.0.2"
