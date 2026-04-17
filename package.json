@@ -30,7 +30,7 @@
     "react-dom": "^19.2.5",
     "sharp": "^0.34.5",
     "the-new-css-reset": "^1.11.3",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
