@@ -1,21 +1,24 @@
 //SDK利用準備
-import { createCanvas } from "canvas";
+import { createCanvas } from "@napi-rs/canvas";
 import fsExtra from "fs-extra/esm";
 import type { MicroCMSQueries } from "microcms-js-sdk";
 import { createClient } from "microcms-js-sdk";
 import sharp from "sharp";
 import path from "path";
 
-const serviceDomain = import.meta.env.MICROCMS_SERVICE_DOMAIN;
-const apiKey = import.meta.env.MICROCMS_API_KEY;
+function getClient() {
+  const serviceDomain =
+    import.meta.env?.MICROCMS_SERVICE_DOMAIN ?? process.env.MICROCMS_SERVICE_DOMAIN;
+  const apiKey = import.meta.env?.MICROCMS_API_KEY ?? process.env.MICROCMS_API_KEY;
 
-if (!serviceDomain || !apiKey) {
-  throw new Error(
-    "環境変数 MICROCMS_SERVICE_DOMAIN と MICROCMS_API_KEY を設定してください。"
-  );
+  if (!serviceDomain || !apiKey) {
+    throw new Error(
+      "環境変数 MICROCMS_SERVICE_DOMAIN と MICROCMS_API_KEY を設定してください。"
+    );
+  }
+
+  return createClient({ serviceDomain, apiKey });
 }
-
-const client = createClient({ serviceDomain, apiKey });
 
 //型定義
 export type Blog = {
@@ -36,12 +39,14 @@ export type BlogResponse = {
 
 //APIの呼び出し
 export const getBlogs = async (queries?: MicroCMSQueries) => {
+  const client = getClient();
   return await client.get<BlogResponse>({ endpoint: "blogs", queries });
 };
 export const getBlogDetail = async (
   contentId: string,
   queries?: MicroCMSQueries
 ) => {
+  const client = getClient();
   return await client.getListDetail<Blog>({
     endpoint: "blogs",
     contentId,
@@ -213,6 +218,7 @@ async function generateOGPImage({
 // ブログ記事のOGP画像も生成する処理を追加
 async function generateBlogThumbnails() {
   try {
+    const client = getClient();
     const blogs = await client.get({
       endpoint: "blogs",
       queries: { limit: 100 },
@@ -245,15 +251,6 @@ async function generateBlogThumbnails() {
     console.error("画像生成中にエラー発生:", error);
   }
 }
-
-// サムネイル生成の実行
-(async () => {
-  try {
-    await generateBlogThumbnails();
-  } catch (error) {
-    console.error("エラー:", error);
-  }
-})();
 
 // ビルド時や定期的に実行する
 export async function generateAllThumbnails() {
