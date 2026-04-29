@@ -18,34 +18,34 @@ const ogImageUrl = ogImage
 ---
 
 <!doctype html>
-<html lang=”ja”>
+<html lang="ja">
 	<head>
-		<GoogleAnalytics id=”G-DHWXFYPDEN” />
-		<meta charset=”UTF-8” />
-		<meta http-equiv=”Content-Language” content=”ja”>
-		<meta name=”description” content={description} />
-		<meta name=”viewport” content=”width=device-width” />
-		<meta name=”generator” content={Astro.generator} />
-		<meta name=”robots” content=”index, follow”>
-		<meta name=”google-site-verification” content=”ttN_UeaA9PFRuCTzuj9dXoDrdlLjaFaML2XS0kC_0JM” />
-		<meta http-equiv=”pragma” content=”no-cache”>
-		<meta name=”expires” content=”0”>
-		<meta http-equiv=”cache-control” content=”no-cache”>
-		<link rel=”icon” type=”image/svg+xml” href=”/favicon.svg” />
-		<link rel=”icon” href=”/favicon.ico” sizes=”48×48″>
-		<link rel=”apple-touch-icon” href=”/favicon.png”>
-		<link rel=”canonical” href={`https://www.imoto-portfolio.jp${Astro.url.pathname}`} />
+		<GoogleAnalytics id="G-DHWXFYPDEN" />
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Language" content="ja" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content="index, follow" />
+		<meta name="google-site-verification" content="ttN_UeaA9PFRuCTzuj9dXoDrdlLjaFaML2XS0kC_0JM" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta name="expires" content="0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" sizes="48x48" />
+		<link rel="apple-touch-icon" href="/favicon.png" />
+		<link rel="canonical" href={`https://www.imoto-portfolio.jp${Astro.url.pathname}`} />
 		<title>{title}</title>
 
-		<meta property=”og:title” content={title} />
-		<meta property=”og:description” content={description} />
-		{ogImageUrl && <meta property=”og:image” content={ogImageUrl} />}
-		<meta property=”og:url” content={`https://www.imoto-portfolio.jp${Astro.url.pathname}`} />
-		<meta property=”og:type” content=”article” />
-		<meta name=”twitter:card” content=”summary_large_image” />
-		<meta name=”twitter:title” content={title} />
-		<meta name=”twitter:description” content={description} />
-		{ogImageUrl && <meta name=”twitter:image” content={ogImageUrl} />}
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+		<meta property="og:url" content={`https://www.imoto-portfolio.jp${Astro.url.pathname}`} />
+		<meta property="og:type" content="article" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
 	</head>
 	<body>
 		<Header>
