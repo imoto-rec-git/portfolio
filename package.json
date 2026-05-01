@@ -18,7 +18,7 @@
     "@napi-rs/canvas": "^0.1.100",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.10",
+    "astro": "^6.2.1",
     "astro-google-analytics": "^1.0.3",
     "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
