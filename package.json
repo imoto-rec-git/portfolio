@@ -18,7 +18,7 @@
     "@napi-rs/canvas": "^1.0.0",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.2.2",
+    "astro": "^6.3.7",
     "astro-google-analytics": "^1.0.3",
     "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
@@ -39,7 +39,7 @@
     "jsdom": "^29.1.1",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
-    "sass-embedded": "^1.99.0",
-    "vitest": "^4.1.6"
+    "sass-embedded": "^1.100.0",
+    "vitest": "^4.1.7"
   }
 }
