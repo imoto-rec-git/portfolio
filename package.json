@@ -16,7 +16,7 @@
     "@astrojs/react": "^5.0.4",
     "@astrojs/sitemap": "3.7.2",
     "@napi-rs/canvas": "^1.0.0",
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "astro": "^6.3.7",
     "astro-google-analytics": "^1.0.3",
